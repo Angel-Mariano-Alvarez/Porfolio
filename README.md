@@ -1,23 +1,31 @@
-#  Portafolio de Proyectos – Ángel Mariano Álvarez López
+# 🗃️ Curso: Sistemas Gestores de Bases de Datos – Código Samurái (FUNDAE)
 
-Este repositorio forma parte de mi porfolio personal. Aquí encontrarás una recopilación de proyectos desarrollados a lo largo de mi formación técnica, con el objetivo de demostrar los conocimientos adquiridos en cursos, certificaciones y prácticas profesionales, tal como se indica en mi currículum.
+Este repositorio recopila ejercicios, prácticas y proyectos realizados durante el curso **"Sistemas Gestores de Bases de Datos"**, impartido a través del programa de formación **Código Samurái de FUNDAE**.
 
-##  Áreas de conocimiento reflejadas
+##  Contenido del curso aplicado en el repositorio
 
--  Desarrollo con Python y bases de datos (SQL / NoSQL)
--  Modelado de datos, normalización y diseño ER
--  Desarrollo de sistemas y aplicaciones web
--  Aplicaciones en la nube y tecnologías modernas
--  Herramientas como Git, SQL Server, MySQL, MongoDB, HTML/CSS, entre otras
+A lo largo del curso se han abordado los siguientes conceptos clave, los cuales han sido puestos en práctica mediante ejemplos y ejercicios reales:
 
-## Sobre los proyectos
+* Fundamentos teóricos
+- ¿Qué es una base de datos y cómo se estructura?
+- Tipos de bases de datos: relacionales vs NoSQL
+- Introducción a los SGBD: MySQL, MariaDB, PostgreSQL, Oracle
+- Normalización y modelos entidad-relación (ER)
 
-Cada proyecto estará contenido en su propia carpeta, con su respectiva documentación técnica, scripts y recursos necesarios. Algunos de ellos incluirán:
+* SQL práctico
+- Creación y administración de bases de datos y tablas
+- Definición de claves primarias, foráneas, `CHECK`, `UNIQUE`
+- Consultas `SELECT`, `JOIN`, `GROUP BY`, `HAVING`, `ORDER BY`
+- Subconsultas, `LEFT JOIN` y filtros avanzados
+- Uso de funciones de agregación: `SUM`, `AVG`, `COUNT`
 
-- Diagramas ER o arquitecturas
-- Scripts de creación de bases de datos
-- Código Python y archivos de configuración
-- Documentación en `README.md` de cada subcarpeta
+* Aplicación real (porfolio)
+- Diseño completo de una base de datos para una tienda online
+- Creación de diagramas ER
+- Generación de scripts reutilizables
+- Consultas de análisis de datos para informes y visualización
+
+
 
 ---
 > Angel Mariano Álvarez López
