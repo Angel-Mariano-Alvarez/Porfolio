@@ -1,8 +1,8 @@
-# 🗃 Curso: Sistemas Gestores de Bases de Datos –  (FUNDAE)
+*Curso: Sistemas Gestores de Bases de Datos –  (FUNDAE)
 
 Este repositorio recopila ejercicios, prácticas y proyectos realizados durante el curso **"Sistemas Gestores de Bases de Datos"**, impartido a través del programa de formación **Código Samurái de FUNDAE**.
 
-##  Contenido del curso aplicado en el repositorio
+* Contenido del curso aplicado en el repositorio
 
 A lo largo del curso se han abordado los siguientes conceptos clave, los cuales han sido puestos en práctica mediante ejemplos y ejercicios reales:
 
