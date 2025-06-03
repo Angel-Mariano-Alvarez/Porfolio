@@ -16,6 +16,7 @@ Estas entidades están relacionadas de forma normalizada, con claves primarias, 
 
 * Archivos incluidos
 
+- `tienda_kimonos_oracle`: script de creación de tablas Clientes y Pedidos, inserciones de datos de ejemplo, y procedimientos almacenados para operaciones CRUD en Oracle. 
 - `modelo_base_datos_Tienda_Online.sql`: script de creación de tablas en SQL Server, con todas las restricciones definidas.
 - `ejercicio_SQLServer_Tienda_Online_Datos_Ejemplo.sql`: inserciones con datos de ejemplo para clientes, productos y pedidos.
 - `consultas_mysql_Tienda_Online.sql`: conjunto de consultas SQL (JOIN, SUM, AVG, subconsultas, etc.) preparadas para MySQL/MariaDB.
