@@ -11,7 +11,7 @@ Demostrar el manejo de MongoDB a nivel intermedio mediante:
 * Archivos incluidos
 - `libros.json`: Archivo original con la colección de libros.
 - `libros_fantasia.json`: Resultado de la exportación de todos los libros del género *Fantasía* usando `mongoexport`.
-- `consultas_mongodb.js`: Script JS con todas las consultas ejecutadas (opcional si lo quieres generar).
+- `consultas_mongodb.js`: Script JS con todas las consultas ejecutadas 
 
 * Comandos clave usados
 - `mongoimport`
