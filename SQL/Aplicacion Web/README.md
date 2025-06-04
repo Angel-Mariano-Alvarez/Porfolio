@@ -3,18 +3,18 @@
 
 Este proyecto es parte del curso de bases de datos (Nivel 4 – FUNDAE / Código Samurái) y demuestra una aplicación web funcional que se conecta a una base de datos en la nube usando Google Cloud SQL.
 
-*  Repositorio
+**  Repositorio
 
 📎 [Repositorio en GitHub](https://github.com/Angel-Mariano-Alvarez/Porfolio/tree/main/SQL/Aplicacion%20Web)
 
-* Funcionalidades
+** Funcionalidades
 
 -  Listar clientes
 -  Añadir nuevos clientes
 -  Eliminar clientes
 -  Conexión segura a una base de datos MySQL alojada en Google Cloud SQL
 
-* Tecnologías utilizadas
+** Tecnologías utilizadas
 
 - **Lenguaje:** Python 3
 - **Framework:** Flask
@@ -23,7 +23,7 @@ Este proyecto es parte del curso de bases de datos (Nivel 4 – FUNDAE / Código
 - **Frontend:** HTML + Bootstrap (opcional)
 - **Variables de entorno:** dotenv
 
-*  Instalación y configuración
+**  Instalación y configuración
 
 1. Clona el repositorio:
 ```bash
