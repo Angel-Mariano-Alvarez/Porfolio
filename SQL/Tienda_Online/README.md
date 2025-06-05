@@ -5,7 +5,9 @@ Este proyecto forma parte de los ejercicios prácticos del curso "Sistemas Gesto
 
 + Tecnologías y herramientas utilizadas
 1 Lenguajes: SQL (DDL y DML)
+  
 2 Motores de bases de datos: SQL Server, MySQL/MariaDB, Oracle
+
 3 Herramientas: SQL Server Management Studio, Oracle SQL Developer, editores de texto
 
 + Estructura del proyecto
@@ -23,8 +25,11 @@ Este proyecto forma parte de los ejercicios prácticos del curso "Sistemas Gesto
 + Aprendizajes y mejoras
 Este proyecto me ha permitido aplicar de forma práctica:
 1 El diseño y normalización de una base de datos realista
+
 2 La implementación en distintos entornos SQL (Oracle, SQL Server, MySQL)
+
 3 El uso de restricciones `CHECK`, claves `PRIMARY` y `FOREIGN`, y atributos `UNIQUE`
+
 4 La creación de procedimientos almacenados en Oracle
 
 Como mejora futura, podría añadirse un módulo para gestión de usuarios y seguridad, así como una interfaz web conectada a esta base de datos.
