@@ -1,9 +1,9 @@
-* Proyecto de Base de Datos – Tienda Online
++ Proyecto de Base de Datos – Tienda Online
 
-* Descripción
++ Descripción
 Este proyecto forma parte de los ejercicios prácticos del curso "Sistemas Gestores de Bases de Datos" (Nivel 3) del programa FUNDAE – Código Samurái. Su objetivo es diseñar, implementar y consultar una base de datos relacional para una tienda online.
 
-* Tecnologías y herramientas utilizadas
++ Tecnologías y herramientas utilizadas
 - Lenguajes: SQL (DDL y DML)
 - Motores de bases de datos: SQL Server, MySQL/MariaDB, Oracle
 - Herramientas: SQL Server Management Studio, Oracle SQL Developer, editores de texto
@@ -20,7 +20,7 @@ Este proyecto forma parte de los ejercicios prácticos del curso "Sistemas Gesto
 └── README.md                                       # Documentación del proyecto
 ```
 
-* Aprendizajes y mejoras
++ Aprendizajes y mejoras
 Este proyecto me ha permitido aplicar de forma práctica:
 - El diseño y normalización de una base de datos realista
 - La implementación en distintos entornos SQL (Oracle, SQL Server, MySQL)
@@ -29,7 +29,7 @@ Este proyecto me ha permitido aplicar de forma práctica:
 
 Como mejora futura, podría añadirse un módulo para gestión de usuarios y seguridad, así como una interfaz web conectada a esta base de datos.
 
-* Estado del proyecto
++ Estado del proyecto
 - [x] Terminado
 - [ ] En desarrollo
 - [ ] En pausa
