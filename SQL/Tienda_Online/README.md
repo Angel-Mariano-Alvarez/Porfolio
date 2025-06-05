@@ -1,36 +1,38 @@
 * Proyecto de Base de Datos – Tienda Online
 
-Este proyecto forma parte de los ejercicios prácticos del curso **"Sistemas Gestores de Bases de Datos"** del programa **Código Samurái – FUNDAE**, y tiene como objetivo diseñar, implementar y consultar una base de datos relacional para una tienda online.
+* Descripción
+Este proyecto forma parte de los ejercicios prácticos del curso "Sistemas Gestores de Bases de Datos" (Nivel 3) del programa FUNDAE – Código Samurái. Su objetivo es diseñar, implementar y consultar una base de datos relacional para una tienda online.
 
-* Estructura del modelo
+* Tecnologías y herramientas utilizadas
+- Lenguajes: SQL (DDL y DML)
+- Motores de bases de datos: SQL Server, MySQL/MariaDB, Oracle
+- Herramientas: SQL Server Management Studio, Oracle SQL Developer, editores de texto
 
-El modelo incluye las siguientes entidades principales:
-- **Clientes**
-- **Productos**
-- **Pedidos**
-- **Detalle_Pedido**
-- **Pagos**
-- **Direcciones**
+* Estructura del proyecto
+```
+.
+├── modelo_base_datos_Tienda_Online.sql             # Script de creación de tablas en SQL Server
+├── ejercicio_SQLServer_Tienda_Online_Datos_Ejemplo.sql   # Datos de ejemplo
+├── consultas_Tienda_Online.sql                     # Consultas SQL avanzadas para análisis
+├── tienda_kimonos_oracle.sql                       # Versión Oracle con procedimientos y datos
+├── tienda online.sqlproj                           # Archivo de proyecto SQL Server
+├── diagrama_ER_Tienda_Online.png                   # Diagrama entidad-relación
+└── README.md                                       # Documentación del proyecto
+```
 
-Estas entidades están relacionadas de forma normalizada, con claves primarias, foráneas y restricciones `CHECK` y `UNIQUE`.
+* Aprendizajes y mejoras
+Este proyecto me ha permitido aplicar de forma práctica:
+- El diseño y normalización de una base de datos realista
+- La implementación en distintos entornos SQL (Oracle, SQL Server, MySQL)
+- El uso de restricciones `CHECK`, claves `PRIMARY` y `FOREIGN`, y atributos `UNIQUE`
+- La creación de procedimientos almacenados en Oracle
 
-* Archivos incluidos
+Como mejora futura, podría añadirse un módulo para gestión de usuarios y seguridad, así como una interfaz web conectada a esta base de datos.
 
-- `tienda_kimonos_oracle`: script de creación de tablas Clientes y Pedidos, inserciones de datos de ejemplo, y procedimientos almacenados para operaciones CRUD en Oracle. 
-- `modelo_base_datos_Tienda_Online.sql`: script de creación de tablas en SQL Server, con todas las restricciones definidas.
-- `ejercicio_SQLServer_Tienda_Online_Datos_Ejemplo.sql`: inserciones con datos de ejemplo para clientes, productos y pedidos.
-- `consultas_mysql_Tienda_Online.sql`: conjunto de consultas SQL (JOIN, SUM, AVG, subconsultas, etc.) preparadas para MySQL/MariaDB.
-- `diagrama_ER_Tienda_Online.png`: diagrama entidad-relación que representa gráficamente la estructura de la base de datos.
-- `README.md`: descripción general del proyecto, objetivos y archivos incluidos.
-
-* Objetivo del proyecto
-
-Este proyecto demuestra conocimientos prácticos en:
-- Diseño de bases de datos relacionales
-- Lenguaje SQL (DDL y DML)
-- Consultas de análisis de datos
-- Normalización y modelado entidad-relación
-- Trabajo con distintos motores de base de datos (SQL Server y MySQL)
+* Estado del proyecto
+- [x] Terminado
+- [ ] En desarrollo
+- [ ] En pausa
 
 ---
 
