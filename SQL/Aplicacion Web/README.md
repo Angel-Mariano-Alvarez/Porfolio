@@ -1,76 +1,92 @@
 
-* Proyecto Aplicación Web con Flask + Google Cloud SQL
+# Proyecto Aplicación Web con Flask + Google Cloud SQL
 
-Este proyecto es parte del curso de bases de datos (Nivel 4 – FUNDAE / Código Samurái) y demuestra una aplicación web funcional que se conecta a una base de datos en la nube usando Google Cloud SQL.
+## Descripción
+Este proyecto forma parte del curso "Sistemas Gestores de Bases de Datos - Nivel 4" del itinerario de formación técnica de FUNDAE – Código Samurái. Consiste en una aplicación web funcional desarrollada en Python con Flask que permite gestionar una lista de clientes, conectándose a una base de datos MySQL alojada en Google Cloud SQL.
 
-**  Repositorio
+## Tecnologías y herramientas utilizadas
+- Lenguaje: Python 3
+- Framework: Flask
+- ORM: SQLAlchemy
+- Base de datos: Google Cloud SQL (MySQL)
+- Frontend: HTML + Bootstrap
+- Variables de entorno: dotenv
+- Entorno: Google Cloud Platform (Cloud SQL, opcionalmente Cloud Run/App Engine)
 
-📎 [Repositorio en GitHub](https://github.com/Angel-Mariano-Alvarez/Porfolio/tree/main/SQL/Aplicacion%20Web)
+## Estructura del proyecto
+```
+.
+├── app_flask_cloudsql.py       # Código principal de la aplicación Flask
+├── Base de datos.sql           # Script de creación de tabla en MySQL
+├── requirements.txt            # Dependencias del proyecto
+├── .env.example                # Ejemplo de configuración de entorno
+├── templates/                  # Carpeta para archivos HTML (no incluida aquí)
+└── README.md                   # Documentación del proyecto
+```
 
-** Funcionalidades
-
--  Listar clientes
--  Añadir nuevos clientes
--  Eliminar clientes
--  Conexión segura a una base de datos MySQL alojada en Google Cloud SQL
-
-** Tecnologías utilizadas
-
-- **Lenguaje:** Python 3
-- **Framework:** Flask
-- **ORM:** SQLAlchemy
-- **Base de datos:** Google Cloud SQL (MySQL)
-- **Frontend:** HTML + Bootstrap (opcional)
-- **Variables de entorno:** dotenv
-
-**  Instalación y configuración
-
+## Instalación y ejecución
 1. Clona el repositorio:
-```bash
-git clone https://github.com/Angel-Mariano-Alvarez/Porfolio.git
-cd Porfolio/SQL/Aplicacion Web
-```
+   ```bash
+   git clone https://github.com/Angel-Mariano-Alvarez/Porfolio.git
+   cd Porfolio/SQL/Aplicacion Web
+   ```
 
-2. Crea un entorno virtual (opcional pero recomendado):
-```bash
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-```
+2. Crea un entorno virtual (opcional):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # En Windows: venv\Scripts\activate
+   ```
 
 3. Instala las dependencias:
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4. Configura tu archivo `.env`:
-```dotenv
-DB_USER=usuario
-DB_PASS=contraseña
-DB_NAME=nombre_basedatos
-DB_HOST=ip_cloudsql_o_hostname
-```
+4. Configura tu archivo `.env` basado en `.env.example`:
+   ```dotenv
+   DB_USER=usuario
+   DB_PASS=contraseña
+   DB_NAME=nombre_basedatos
+   DB_HOST=ip_cloudsql_o_hostname
+   ```
 
-5. Inicializa la base de datos (una vez):
-```bash
-python
->>> from app import db
->>> db.create_all()
->>> exit()
-```
+5. Inicializa la base de datos:
+   ```bash
+   python
+   >>> from app_flask_cloudsql import db
+   >>> db.create_all()
+   >>> exit()
+   ```
 
 6. Ejecuta la aplicación:
-```bash
-python app.py
-```
+   ```bash
+   python app_flask_cloudsql.py
+   ```
 
-Accede a la aplicación en `http://localhost:5000`.
+Accede a la app desde `http://localhost:5000`.
 
-## 🧪 Seguridad y despliegue
+## Resultados o capturas
+- Gestión de clientes (listado, inserción, eliminación)
+- Conexión con MySQL en entorno cloud
+- Aplicación funcional con interfaz básica HTML
 
-- Recomendado usar conexión SSL para Google Cloud SQL
-- Se puede desplegar fácilmente en Google Cloud Run o App Engine
+## Aprendizajes y mejoras
+Este proyecto me ha permitido poner en práctica:
+- Conexión segura entre una aplicación Python y una base de datos en la nube
+- Uso de ORM (SQLAlchemy) para abstraer operaciones sobre la base de datos
+- Gestión de variables de entorno con `.env`
+- Despliegue local de aplicaciones web con Flask
 
----
+Mejoras futuras:
+- Implementación de validación de formularios y seguridad (CSRF, control de errores)
+- Despliegue automático con Docker y Google Cloud Run
+- Tests automatizados con `pytest`
 
-**Autor:** Ángel Mariano Álvarez López  
+## Estado del proyecto
+- [x] Terminado
+- [ ] En desarrollo
+- [ ] En pausa
+
+## Autor
+Ángel Mariano Álvarez López  
 📧 angelmarianoalvarez@gmail.com
