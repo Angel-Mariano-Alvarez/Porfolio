@@ -8,7 +8,7 @@ Este proyecto forma parte de los ejercicios prácticos del curso "Sistemas Gesto
 - Motores de bases de datos: SQL Server, MySQL/MariaDB, Oracle
 - Herramientas: SQL Server Management Studio, Oracle SQL Developer, editores de texto
 
-* Estructura del proyecto
++ Estructura del proyecto
 ```
 .
 ├── modelo_base_datos_Tienda_Online.sql             # Script de creación de tablas en SQL Server
