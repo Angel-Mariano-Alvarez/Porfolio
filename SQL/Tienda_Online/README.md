@@ -42,4 +42,4 @@ Como mejora futura, podría añadirse un módulo para gestión de usuarios y seg
 
 ## Autor
 Ángel Mariano Álvarez López  
-[GitHub](https://github.com/Angel-Mariano-Alvarez)
+📧 angelmarianoalvarez@gmail.com
