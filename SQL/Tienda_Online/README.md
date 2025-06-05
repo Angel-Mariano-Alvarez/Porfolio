@@ -21,14 +21,15 @@ Este proyecto forma parte de los ejercicios prácticos del curso "Sistemas Gesto
 ```
 
 + Aprendizajes y mejoras
+Este proyecto me ha permitido aplicar de forma práctica:
 
- *El diseño y normalización de una base de datos realista
+  *El diseño y normalización de una base de datos realista
  
- *La implementación en distintos entornos SQL (Oracle, SQL Server, MySQL)
+  *La implementación en distintos entornos SQL (Oracle, SQL Server, MySQL)
  
- *El uso de restricciones `CHECK`, claves `PRIMARY` y `FOREIGN`, y atributos `UNIQUE`
+  *El uso de restricciones `CHECK`, claves `PRIMARY` y `FOREIGN`, y atributos `UNIQUE`
  
- *La creación de procedimientos almacenados en Oracle
+  *La creación de procedimientos almacenados en Oracle
 
 Como mejora futura, podría añadirse un módulo para gestión de usuarios y seguridad, así como una interfaz web conectada a esta base de datos.
 
