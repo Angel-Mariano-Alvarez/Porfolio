@@ -1,25 +1,45 @@
-* Carpeta SQL – Proyectos y Prácticas de Bases de Datos
 
-Esta carpeta contiene proyectos, ejercicios y consultas desarrollados como parte de mi formación en bases de datos, así como futuras prácticas que reflejan mi evolución en este campo.
+# Proyectos de Bases de Datos
 
-Actualmente, incluye una subcarpeta dedicada al desarrollo completo de un proyecto de base de datos para una tienda online, realizado durante el curso **"Sistemas Gestores de Bases de Datos"** del programa **Código Samurái – FUNDAE**.
+## Descripción
+Esta carpeta contiene los proyectos desarrollados como parte del itinerario formativo de bases de datos del programa FUNDAE – Código Samurái, desde el Nivel 3 hasta el Nivel 6. Aquí se integran ejercicios prácticos sobre modelado, consulta, integración y uso de bases de datos relacionales y no relacionales.
 
-*  Estructura actual
+Cada proyecto refleja la progresión en el dominio de herramientas, conceptos y buenas prácticas en la gestión de bases de datos, tanto en entorno local como en la nube.
 
-### `/Tienda_Online`
-Contiene el diseño y la implementación de una base de datos relacional con:
-- Creación de tablas y restricciones (`modelo_base_datos_Tienda_Online.sql`)
-- Diagrama entidad-relación (`diagrama_ER_Tienda_Online.png`)
-- Consultas de análisis SQL (`consultas_mysql_Tienda_Online.sql`)
-- Datos de ejemplo para pruebas en SQL Server (`ejercicio_SQLServer_Tienda_Online_Datos_Ejemplo.sql`)
-- Documentación (`README.md`)
+## Proyectos incluidos actualmente
 
-*  Objetivo
+### 1. Tienda Online (Nivel 3)
+- Modelado entidad-relación y normalización
+- Implementación en SQL Server, MySQL y Oracle
+- Consultas avanzadas con `JOIN`, funciones agregadas y subconsultas
 
-Este espacio me permite documentar mis conocimientos técnicos en SQL y bases de datos relacionales, aplicando lo aprendido en distintos contextos. A medida que avance en nuevos proyectos y desafíos, se irán incorporando más carpetas organizadas por temática o aplicación.
+### 2. Gestión de Libros en MongoDB (Nivel 4)
+- Importación y exportación de documentos JSON
+- Consultas básicas y agregaciones en MongoDB
+- Uso de `mongoimport`, `mongoexport` y scripts JS
 
----
+### 3. Aplicación Web con Flask y Google Cloud SQL (Nivel 4)
+- Desarrollo de una app web funcional con Flask
+- Conexión con base de datos MySQL en Google Cloud SQL
+- Operaciones CRUD usando SQLAlchemy
 
-**Autor:** Ángel Mariano Álvarez López  
+## Estado de desarrollo
+
+Estos proyectos se irán ampliando con ejercicios y prácticas correspondientes a los **niveles 5 y 6** del itinerario, abordando temas como:
+- Administración avanzada de bases de datos
+- Seguridad, backups y recuperación
+- Optimización de rendimiento
+- Integración de bases de datos con APIs y servicios web
+
+## Estructura general
+```
+Bases_de_Datos/
+├── Tienda_Online/
+├── MongoDB/
+├── Aplicacion_Web/
+└── README.md
+```
+
+## Autor
+Ángel Mariano Álvarez López  
 📧 angelmarianoalvarez@gmail.com
-
