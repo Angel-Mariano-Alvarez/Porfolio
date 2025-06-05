@@ -21,7 +21,6 @@ Este proyecto forma parte de los ejercicios prácticos del curso "Sistemas Gesto
 ```
 
 + Aprendizajes y mejoras
-Este proyecto me ha permitido aplicar de forma práctica
   *El diseño y normalización de una base de datos realista
   *La implementación en distintos entornos SQL (Oracle, SQL Server, MySQL)
   *El uso de restricciones `CHECK`, claves `PRIMARY` y `FOREIGN`, y atributos `UNIQUE`
