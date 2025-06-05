@@ -1,36 +1,42 @@
-* Proyecto MongoDB - Gestión de Libros
 
-Este proyecto forma parte del curso "Sistemas Gestores de Bases de Datos - Nivel 4" del itinerario de formación de FUNDAE – Código Samurái.
+# Proyecto MongoDB – Gestión de Libros
 
-* Objetivo
-Demostrar el manejo de MongoDB a nivel intermedio mediante:
-- Importación de documentos JSON a una base de datos.
-- Ejecución de consultas para filtrar y agrupar información.
-- Exportación de resultados de consultas a nuevos archivos.
+## Descripción
+Este proyecto forma parte del curso "Sistemas Gestores de Bases de Datos - Nivel 4" dentro del itinerario formativo de FUNDAE – Código Samurái. Representa un ejercicio introductorio de trabajo con bases de datos NoSQL orientadas a documentos, utilizando MongoDB.
 
-* Archivos incluidos
-- `libros.json`: Archivo original con la colección de libros.
-- `libros_fantasia.json`: Resultado de la exportación de todos los libros del género *Fantasía* usando `mongoexport`.
-- `consultas_mongodb.js`: Script JS con todas las consultas ejecutadas 
+## Tecnologías y herramientas utilizadas
+- Lenguaje: JavaScript para consultas en consola MongoDB
+- Base de datos: MongoDB
+- Formato de datos: JSON
+- Herramientas: mongoimport, mongoexport
 
-* Comandos clave usados
-- `mongoimport`
-- `mongoexport`
-- Consultas MongoDB (`find`, `aggregate`)
+## Estructura del proyecto
+```
+.
+├── libros.json              # Colección completa de libros en formato JSON
+├── libros_fantasia.json     # Exportación de libros del género Fantasía
+├── consultas_mongodb.js     # Script de consultas ejecutadas en MongoDB
+└── README.md                # Documentación del proyecto
+```
 
-* Resultado
-La actividad pone en práctica:
-- CRUD básico con MongoDB.
-- Trabajo con estructuras de datos tipo documento (JSON).
-- Operaciones de filtrado y agrupación usando `find` y `aggregate`.
+## Resultados o capturas
+- Consultas con `find` para filtrar libros por autor, género y año de publicación
+- Agregación con `aggregate` para contar libros por género
+- Exportación de subconjuntos de datos a archivos JSON
 
-* Conocimientos aplicados
-- Modelado de datos con JSON.
-- Comandos intermedios en MongoDB.
-- Exportación e importación de datos en colecciones.
----
+## Aprendizajes y mejoras
+Este proyecto introductorio me ha permitido familiarizarme con:
+- Estructuras de datos tipo documento (JSON)
+- Comandos básicos de importación/exportación en MongoDB
+- Operaciones de filtrado y agrupación de datos con `find` y `aggregate`
 
-**Autor:** Ángel Mariano Álvarez López  
+Como mejora futura, se podría implementar una estructura más compleja con validaciones, índices y relaciones simuladas entre colecciones.
+
+## Estado del proyecto
+- [x] Terminado
+- [ ] En desarrollo
+- [ ] En pausa
+
+## Autor
+Ángel Mariano Álvarez López  
 📧 angelmarianoalvarez@gmail.com
-
-
