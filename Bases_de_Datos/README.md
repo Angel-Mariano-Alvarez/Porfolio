@@ -2,9 +2,9 @@
 # Proyectos de Bases de Datos
 
 ## Descripción
-Esta carpeta contiene los proyectos desarrollados como parte del itinerario formativo de bases de datos del programa FUNDAE – Código Samurái, desde el Nivel 3 hasta el Nivel 6. Aquí se integran ejercicios prácticos sobre modelado, consulta, integración y uso de bases de datos relacionales y no relacionales.
+Esta carpeta contiene los proyectos desarrollados como parte del itinerario formativo de bases de datos del programa FUNDAE – Código Samurái. Reúne ejercicios prácticos desde el Nivel 3 hasta el Nivel 5, abordando modelado, consultas, optimización y programación en bases de datos relacionales y no relacionales.
 
-Cada proyecto refleja la progresión en el dominio de herramientas, conceptos y buenas prácticas en la gestión de bases de datos, tanto en entorno local como en la nube.
+Cada proyecto demuestra competencias aplicadas en el diseño, implementación y gestión de bases de datos tanto en entornos locales como en la nube.
 
 ## Proyectos incluidos actualmente
 
@@ -23,13 +23,23 @@ Cada proyecto refleja la progresión en el dominio de herramientas, conceptos y 
 - Conexión con base de datos MySQL en Google Cloud SQL
 - Operaciones CRUD usando SQLAlchemy
 
+### 4. Optimización de consultas en SQL Server (Nivel 5)
+- Análisis de rendimiento en SQL Server
+- Creación de índices y reescritura de consultas
+- Evaluación del impacto mediante planes de ejecución
+
+### 5. Procedimientos almacenados en Oracle – Reto CRUD (Nivel 5)
+- Diseño de base de datos en Oracle
+- Implementación de procedimientos almacenados para operaciones CRUD
+- Documentación técnica, guía de uso y pruebas verificadas
+
 ## Estado de desarrollo
 
-Estos proyectos se irán ampliando con ejercicios y prácticas correspondientes a los **niveles 5 y 6** del itinerario, abordando temas como:
+Este porfolio se encuentra actualizado hasta el **Nivel 5**. Los próximos proyectos corresponderán al **Nivel 6**, incluyendo prácticas sobre:
 - Administración avanzada de bases de datos
-- Seguridad, backups y recuperación
-- Optimización de rendimiento
-- Integración de bases de datos con APIs y servicios web
+- Seguridad, copias de seguridad y recuperación
+- Optimización compleja y monitoreo de rendimiento
+- Integración con servicios web y APIs
 
 ## Estructura general
 ```
@@ -37,6 +47,8 @@ Bases_de_Datos/
 ├── Tienda_Online/
 ├── MongoDB/
 ├── Aplicacion_Web/
+├── Optimizacion_SQL/
+├── Procedimientos_Oracle/
 └── README.md
 ```
 
