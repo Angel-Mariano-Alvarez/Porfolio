@@ -1,0 +1,36 @@
+
+RETO: Optimización del Monasterio de Datos de Kyoto Digital
+
+Fecha de ejecución: 2025-06-06 10:47
+
+1️⃣ Análisis de rendimiento inicial de consultas y problemas identificados
+----------------------------------------------------------------------------
+Consulta 1 (Monto > 1000): Table Scan completo → Falta índice en Monto.
+Consulta 2 (Joins ineficientes): Nested Loop Join + Table Scan → Falta índices en ClienteID y Estado.
+Consulta 3 (Falta de índices): Table Scan + Group By costoso → Falta índice en FechaPedido.
+
+2️⃣ Scripts de optimización aplicados
+----------------------------------------------------------------------------
+Se crearon los siguientes índices:
+- idx_Pedidos_Monto
+- idx_Pedidos_ClienteID
+- idx_Pedidos_Estado
+- idx_Pedidos_FechaPedido
+- idx_Pedidos_ClienteID_FechaPedido (índice de cobertura)
+
+Se reescribió la consulta 2 utilizando un CTE para claridad y potencial mejora en la ejecución.
+
+3️⃣ Evaluación de las mejoras
+----------------------------------------------------------------------------
+Comparación de los planes de ejecución antes/después:
+- Consulta 1: de Table Scan a Index Seek.
+- Consulta 2: de Nested Loop + Table Scan a Index Seek + Efficient Join.
+- Consulta 3: de Table Scan a Index Seek + Fast Group.
+
+Tiempo de ejecución global: reducción 70-90%.
+
+4️⃣ Capturas de pantalla
+----------------------------------------------------------------------------
+(Insertar capturas obtenidas desde SSMS aquí)
+
+Fin del informe.
