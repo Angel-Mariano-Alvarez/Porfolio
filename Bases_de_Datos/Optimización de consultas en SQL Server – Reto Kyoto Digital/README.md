@@ -1,5 +1,5 @@
 
-# Optimización de consultas en SQL Server – Reto Kyoto Digital
+# Optimización de consultas en SQL Server
 
 ## Descripción
 Este proyecto forma parte del Nivel 5 del curso "Sistemas Gestores de Bases de Datos" del programa FUNDAE – Código Samurái. El reto consistía en mejorar el rendimiento de un conjunto de consultas SQL sobre una base de datos relacional, utilizando herramientas de análisis y técnicas de optimización como la creación de índices y la reescritura de consultas.
