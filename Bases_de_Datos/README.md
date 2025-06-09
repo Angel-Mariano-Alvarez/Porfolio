@@ -2,55 +2,31 @@
 # Proyectos de Bases de Datos
 
 ## Descripción
-Esta carpeta contiene los proyectos desarrollados como parte del itinerario formativo de bases de datos del programa FUNDAE – Código Samurái. Reúne ejercicios prácticos desde el Nivel 3 hasta el Nivel 5, abordando modelado, consultas, optimización y programación en bases de datos relacionales y no relacionales.
+Esta carpeta reúne los proyectos realizados durante el curso completo de **Sistemas Gestores de Bases de Datos (150 horas)**, organizado por FUNDAE – Código Samurái, finalizado en junio de 2025. A lo largo de seis niveles formativos, se desarrollaron proyectos prácticos que abarcan desde el diseño relacional básico hasta técnicas avanzadas de optimización, programación en Oracle, administración y seguridad en entornos SQL y NoSQL.
 
-Cada proyecto demuestra competencias aplicadas en el diseño, implementación y gestión de bases de datos tanto en entornos locales como en la nube.
+Los proyectos están estructurados por temática y dificultad creciente, y están documentados para demostrar conocimientos aplicados en entornos reales de trabajo.
 
-## Proyectos incluidos actualmente
+## Proyectos incluidos
 
-### 1. Tienda Online (Nivel 3)
-- Modelado entidad-relación y normalización
-- Implementación en SQL Server, MySQL y Oracle
-- Consultas avanzadas con `JOIN`, funciones agregadas y subconsultas
+### Nivel 3
+- **Tienda Online**: Modelado entidad-relación, normalización y consultas SQL complejas.
 
-### 2. Gestión de Libros en MongoDB (Nivel 4)
-- Importación y exportación de documentos JSON
-- Consultas básicas y agregaciones en MongoDB
-- Uso de `mongoimport`, `mongoexport` y scripts JS
+### Nivel 4
+- **Gestión de libros en MongoDB**: Inserción, filtrado y exportación de datos en MongoDB.
+- **Aplicación Web con Flask y Google Cloud SQL**: Desarrollo de backend conectado a una BBDD relacional en la nube.
 
-### 3. Aplicación Web con Flask y Google Cloud SQL (Nivel 4)
-- Desarrollo de una app web funcional con Flask
-- Conexión con base de datos MySQL en Google Cloud SQL
-- Operaciones CRUD usando SQLAlchemy
+### Nivel 5
+- **Optimización de consultas en SQL Server**: Análisis y mejora de rendimiento usando índices.
+- **Procedimientos almacenados en Oracle**: Implementación de operaciones CRUD mediante PL/SQL.
 
-### 4. Optimización de consultas en SQL Server (Nivel 5)
-- Análisis de rendimiento en SQL Server
-- Creación de índices y reescritura de consultas
-- Evaluación del impacto mediante planes de ejecución
+### Nivel 6
+- **MongoDB avanzado – Reto Tienda Online**: Índices, replicación, despliegue en Atlas, monitoreo y seguridad.
+- **Seguridad y encriptación en MySQL**: Encriptación en tránsito y en reposo, políticas de contraseñas seguras.
 
-### 5. Procedimientos almacenados en Oracle – Reto CRUD (Nivel 5)
-- Diseño de base de datos en Oracle
-- Implementación de procedimientos almacenados para operaciones CRUD
-- Documentación técnica, guía de uso y pruebas verificadas
-
-## Estado de desarrollo
-
-Este porfolio se encuentra actualizado hasta el **Nivel 5**. Los próximos proyectos corresponderán al **Nivel 6**, incluyendo prácticas sobre:
-- Administración avanzada de bases de datos
-- Seguridad, copias de seguridad y recuperación
-- Optimización compleja y monitoreo de rendimiento
-- Integración con servicios web y APIs
-
-## Estructura general
-```
-Bases_de_Datos/
-├── Tienda_Online/
-├── MongoDB/
-├── Aplicacion_Web/
-├── Optimizacion_SQL/
-├── Procedimientos_Oracle/
-└── README.md
-```
+## Estado del repositorio
+- [x] Curso completo finalizado (150 horas)
+- [x] Proyectos documentados por nivel
+- [x] Prácticas alineadas con entornos reales y herramientas profesionales
 
 ## Autor
 Ángel Mariano Álvarez López  
