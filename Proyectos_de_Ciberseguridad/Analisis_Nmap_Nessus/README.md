@@ -1,38 +1,60 @@
-## Proyecto 1: Análisis de Vulnerabilidades con Nmap y Nessus
 
-Este proyecto demuestra mis habilidades prácticas en el análisis de vulnerabilidades utilizando Nmap y Nessus.
+# Análisis de Vulnerabilidades con Nmap y Nessus
 
-### Descripción del Proyecto
+## Descripción
+Este proyecto forma parte del curso IFCT0050 – Ciberseguridad avanzada en entornos de las tecnologías de la operación (SEPE). El objetivo fue llevar a cabo un análisis de vulnerabilidades en un entorno virtualizado usando las herramientas Nmap y Nessus, simulando un escenario realista de auditoría.
 
-En este proyecto, configuré un laboratorio con Kali Linux como sistema atacante, Metasploitable3 como objetivo y Windows 11 para el análisis de informes.  Utilicé Nmap para el descubrimiento de hosts activos, escaneo de puertos, identificación de servicios y versiones, y ejecución de scripts NSE.  También utilicé Nessus para realizar escaneos de vulnerabilidades más exhaustivos. Finalmente, comparé los resultados obtenidos con ambas herramientas y elaboré un informe ejecutivo simulado.
+## Entorno de red
 
-### Tecnologías Utilizadas
+![Diagrama de red](diagrama_red_nmap_nessus.png)
 
-* Kali Linux
-* Metasploitable3
-* Windows 11
-* Nmap
-* Nessus
+- **Plataforma de virtualización**: VMware Workstation 17.6.3
+- **Máquinas virtuales**:
+  - **Kali Linux** (2025-W23) – IP: `192.168.1.144` (auditoría + Nessus)
+  - **Windows 11** (Win11_24H2) – IP: `192.168.1.147`
+  - **Metasploitable2** – IP: `190.168.1.146`
 
-### Configuración del Laboratorio
+## Fases del ejercicio
 
-(Aquí puedes añadir un diagrama de red y los pasos de instalación de cada sistema)
+### 1. Verificación de conectividad
 
-### Fases del Análisis (Nmap)
+Se realizaron pruebas de `ping` desde Kali y Windows hacia la máquina Metasploitable2.
 
-(Aquí puedes añadir los comandos Nmap utilizados, capturas de pantalla de los resultados y una breve explicación de cada fase)
+- ![Ping Kali](Captura_ping_Kali.PNG)
+- ![Ping Windows](Captura_ping_windows.PNG)
 
-### Fases del Análisis (Nessus)
+### 2. Escaneo con Nmap
 
-(Aquí puedes añadir detalles sobre la configuración de los escaneos en Nessus, las políticas utilizadas, las IPs de los objetivos y capturas de pantalla de los resultados)
+Se ejecutó un escaneo para identificar puertos abiertos y servicios visibles:
 
-### Análisis Comparativo y Documentación
+📄 [`resultados_nmap.txt`](resultados_nmap.txt)
 
-(Aquí debes comparar los resultados de Nmap y Nessus, destacar las vulnerabilidades encontradas, responder a las "Preguntas de reflexión" del ejercicio y presentar tu "informe ejecutivo" simulado)
+### 3. Análisis de vulnerabilidades con Nessus
 
-### Lecciones Aprendidas
----
-> Angel Mariano Álvarez López
-> 684624564  
-> angelmarianoalvarez@gmail.com  
-> [LinkedIn](https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit) 
+Se ejecutó un escaneo completo desde Nessus Essentials, instalado en Kali Linux, exportando el informe de vulnerabilidades encontradas:
+
+📄 [`resultados_nessus.txt`](resultados_nessus.txt)
+
+### 4. Comparativa entre herramientas
+
+Se redactó un documento comparativo para identificar fortalezas y limitaciones de cada herramienta:
+
+📄 [`comparativa_nmap_nessus.md`](comparativa_nmap_nessus.md)
+
+## Conclusión
+
+Este laboratorio permitió:
+
+- Simular un entorno de pentesting real
+- Evaluar la detección de servicios y vulnerabilidades
+- Analizar el impacto de herramientas combinadas (Nmap + Nessus)
+- Practicar la documentación técnica y la redacción de informes
+
+## Estado del proyecto
+- [x] Terminado
+- [ ] En desarrollo
+- [ ] En pausa
+
+## Autor
+Ángel Mariano Álvarez López  
+📧 angelmarianoalvarez@gmail.com
