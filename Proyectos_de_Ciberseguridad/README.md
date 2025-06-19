@@ -1,24 +1,37 @@
+
 # Proyectos de Ciberseguridad
 
-Esta carpeta está dedicada a recopilar proyectos y ejercicios prácticos realizados en el ámbito de la seguridad informática y ciberseguridad. Mi objetivo es aplicar los conocimientos adquiridos en cursos y formaciones, demostrando habilidades en el análisis de vulnerabilidades, configuración segura de sistemas, scripting para seguridad y otras áreas clave.
+## Descripción
+Esta carpeta recoge los proyectos prácticos desarrollados durante el curso IFCT0050 – **Ciberseguridad avanzada en entornos de las tecnologías de la operación**, impartido por el SEPE. Los ejercicios simulan escenarios reales de auditoría, análisis de vulnerabilidades, evaluación de seguridad en redes y uso de herramientas profesionales.
 
-A medida que avance en el curso de Seguridad Informática del SEPE (IFCT0050) y otras formaciones, iré añadiendo y actualizando los proyectos aquí presentados.
+Cada proyecto está documentado para reflejar no solo el proceso técnico, sino también el razonamiento, las decisiones tomadas y las conclusiones obtenidas.
 
-## Proyectos Incluidos
+## Proyectos incluidos
 
 ### 1. Análisis de Vulnerabilidades con Nmap y Nessus
-* **Descripción:** Este proyecto aborda la configuración de un laboratorio de ciberseguridad y la realización de un análisis de vulnerabilidades utilizando herramientas estándar de la industria como Nmap para el reconocimiento de red y Nessus para un escaneo más exhaustivo. Incluye la interpretación de resultados y la elaboración de un informe ejecutivo simulado.
-* **Tecnologías Clave:** Kali Linux, Metasploitable3, Nmap, Nessus.
-* **Estado:** Completado (primer ejercicio del curso de Seguridad Informática).
+- Simulación de un entorno virtualizado con Kali Linux, Windows 11 y Metasploitable2.
+- Verificación de conectividad mediante `ping`.
+- Escaneo de puertos y servicios con Nmap.
+- Análisis automatizado de vulnerabilidades con Nessus Essentials.
+- Comparativa técnica entre ambas herramientas.
+- Documentación completa, capturas y reflexiones.
 
-## Estado de la Carpeta
+📁 [`Analisis_Nmap_Nessus/`](./Analisis_Nmap_Nessus)
 
-- [ ] Primer proyecto añadido y documentado.
-- [ ] Incorporación de futuros ejercicios del curso IFCT0050.
-- [ ] Posible inclusión de proyectos personales o de otras formaciones en ciberseguridad.
+## Estado del repositorio
+- [x] Proyectos iniciados
+- [x] Documentación técnica completa
+- [x] Escenarios realistas y replicables
+- [ ] Más ejercicios en desarrollo
 
----
-> Angel Mariano Álvarez López
-> 684624564  
-> angelmarianoalvarez@gmail.com  
-> [LinkedIn](https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit) 
+## Herramientas utilizadas
+- Nmap
+- Nessus Essentials
+- Kali Linux
+- VMware Workstation
+- Windows 11
+- Metasploitable2
+
+## Autor
+Ángel Mariano Álvarez López  
+📧 angelmarianoalvarez@gmail.com
