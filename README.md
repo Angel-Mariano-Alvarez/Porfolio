@@ -18,7 +18,7 @@ Este repositorio forma parte de mi porfolio personal. Aquí encontrarás una rec
 Proyectos desarrollados en el curso "Sistemas Gestores de Bases de Datos" (150 h, FUNDAE). Incluye modelado, consultas, procedimientos almacenados, aplicaciones conectadas a bases de datos en la nube y seguridad.
 
 ### 📁 Proyectos_de_Ciberseguridad
-Ejercicios realizados en el curso IFCT0050 – Ciberseguridad avanzada en entornos de las tecnologías de la operación (SEPE). Simulan escenarios reales de análisis de vulnerabilidades, tráfico de red y exposición pública.
+Ejercicios realizados en el curso IFCT0050 – Seguridad informatica (SEPE). Simulan escenarios reales de análisis de vulnerabilidades, tráfico de red y exposición pública.
 
 ## Sobre los proyectos
 
