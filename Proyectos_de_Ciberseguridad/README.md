@@ -35,6 +35,5 @@ A medida que avance en el curso de Seguridad Informática del SEPE (IFCT0050) y 
 
 ---
 > Angel Mariano Álvarez López
-> 684624564
 > angelmarianoalvarez@gmail.com
 > [LinkedIn](https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit)
