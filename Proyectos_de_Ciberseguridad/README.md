@@ -10,13 +10,13 @@ A medida que avance en el curso de Seguridad Informática del SEPE (IFCT0050) y 
 * **Descripción:** Este proyecto aborda la configuración de un laboratorio de ciberseguridad y la realización de un análisis de vulnerabilidades utilizando herramientas estándar de la industria como Nmap para el reconocimiento de red y Nessus para un escaneo más exhaustivo. Incluye la interpretación de resultados y la elaboración de un informe ejecutivo simulado.
 * **Tecnologías Clave:** Kali Linux, Metasploitable3, Nmap, Nessus.
 * **Estado:** Completado (primer ejercicio del curso de Seguridad Informática).
-* **Enlace al Proyecto:** [Ver Proyecto](Proyecto_Nmap_Nessus/README.md)
+* **Enlace al Proyecto:** [Ver Proyecto](https://github.com/Angel-Mariano-Alvarez/Porfolio/tree/main/Proyectos_de_Ciberseguridad/Analisis_Nmap_Nessus)
 
 ### 2. Reconocimiento de Superficie de Ataque con Shodan: OSINT y Análisis de Exposición
 * **Descripción:** Este proyecto se centra en el uso de Shodan, un motor de búsqueda de dispositivos conectados a Internet, para realizar tareas de reconocimiento pasivo y evaluar la superficie de ataque externa. Simula el rol de un consultor de seguridad para identificar información públicamente accesible sobre infraestructuras y los riesgos de seguridad asociados a esta exposición, demostrando la importancia de la Inteligencia de Fuentes Abiertas (OSINT) y la configuración segura de servicios.
 * **Tecnologías Clave:** Shodan (interfaz web), OSINT, análisis de vulnerabilidades, evaluación de riesgos.
 * **Estado:** Completado (ejercicio del curso de Seguridad Informática).
-* **Enlace al Proyecto:** [Ver Proyecto](Proyecto_Shodan/README.md)
+* **Enlace al Proyecto:** [Ver Proyecto](https://github.com/Angel-Mariano-Alvarez/Porfolio/tree/main/Proyectos_de_Ciberseguridad/Reconocimiento_de_Superficie_de_Ataque_con_Shodan_OSINT_y_An%C3%A1lisis%20de%20Exposici%C3%B3n)
 
 ## Estado de la Carpeta
 
