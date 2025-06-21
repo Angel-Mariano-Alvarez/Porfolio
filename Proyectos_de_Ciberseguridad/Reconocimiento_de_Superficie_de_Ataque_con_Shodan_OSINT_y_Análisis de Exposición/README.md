@@ -53,7 +53,7 @@ A continuación, se presentan las búsquedas más significativas realizadas en S
     * Una gestión de parches rigurosa y continua.
     * La monitorización de la exposición de la infraestructura frente a CVEs conocidos.
     * La conciencia de que las herramientas, incluso en sus versiones básicas, ofrecen solo una parte del panorama completo.
-* **Captura de Pantalla (Opcional):** [Si Shodan te permitió alguna búsqueda relacionada con vulnerabilidades usando otros filtros (ej. por versión de software conocida por ser vulnerable) o una captura de la interfaz mostrando la limitación de la búsqueda `vuln:`, podrías incluirla aquí. De lo contrario, puedes omitir la captura para esta sección.]
+    
 
 ### 5. Identificación de Dispositivos por Fabricante/Producto
 
