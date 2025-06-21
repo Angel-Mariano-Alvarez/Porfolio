@@ -27,7 +27,6 @@ A continuación, se describen las fases clave del ejercicio, los pasos realizado
 * **Acciones Realizadas:**
     * Visita a un sitio web de prueba HTTP (`http://www.celfi.gob.ar/login` o similar, si se usó este o uno equivalente accesible públicamente).
     * Introducción de credenciales de prueba (`admin`/`password123`).
-    * Captura de tráfico en Wireshark.
     * **Filtros aplicados:** `http.request.method == POST`, `http.request.uri contains "login"`, `http.authbasic`.
 * **Resultados Clave:** Se pudo observar claramente las credenciales (`admin` y `password123`) transmitidas en texto plano dentro de los paquetes HTTP, evidenciando la falta de seguridad.
 * **Análisis de Riesgo:** Demostración directa de cómo un atacante podría interceptar y robar credenciales o información sensible en una red no cifrada.
@@ -38,7 +37,6 @@ A continuación, se describen las fases clave del ejercicio, los pasos realizado
 * **Acciones Realizadas:**
     * Acceso a una página web HTTPS (ej. `https://www.gmail.com`).
     * Intento de autenticación con credenciales ficticias.
-    * Captura de tráfico en Wireshark.
     * **Filtros aplicados:** `tls`, `ssl`, `tls.handshake.type == 1`, `ssl.record.content_type == 22`.
 * **Resultados Clave:** Se observaron los handshakes TLS/SSL, pero el contenido de los datos de la aplicación (credenciales, etc.) aparecía ilegible/cifrado, confirmando la protección proporcionada por HTTPS.
 * **Análisis de Riesgo:** Confirmación de que, aunque el tráfico HTTPS no es completamente "invisible" (se ven los metadatos de la conexión), la información crítica está protegida.
