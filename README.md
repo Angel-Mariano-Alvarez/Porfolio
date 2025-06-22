@@ -9,8 +9,9 @@ Este repositorio forma parte de mi porfolio personal. Aquí encontrarás una rec
 - Modelado de datos, consultas y optimización
 - Programación web y desarrollo de aplicaciones
 - Administración y análisis de ciberseguridad
+- Despliegue de servicios en la nube
 - Análisis de vulnerabilidades, escaneos y OSINT
-- Herramientas como SQL Server, Oracle, MySQL, MongoDB, Python, Git, Kali Linux, Wireshark, Shodan, Nmap y Nessus
+- Herramientas como SQL Server, Oracle, MySQL, MongoDB, Python, Git, Kali Linux, Wireshark, Shodan, Nmap, Nessus y AWS
 
 ## Organización del porfolio
 
@@ -18,7 +19,10 @@ Este repositorio forma parte de mi porfolio personal. Aquí encontrarás una rec
 Proyectos desarrollados en el curso "Sistemas Gestores de Bases de Datos" (150 h, FUNDAE). Incluye modelado, consultas, procedimientos almacenados, aplicaciones conectadas a bases de datos en la nube y seguridad.
 
 ### 📁 Proyectos_de_Ciberseguridad
-Ejercicios realizados en el curso IFCT0050 – Seguridad informatica (SEPE). Simulan escenarios reales de análisis de vulnerabilidades, tráfico de red y exposición pública.
+Ejercicios realizados en el curso IFCT0050 – Seguridad informática (SEPE). Simulan escenarios reales de análisis de vulnerabilidades, tráfico de red y exposición pública.
+
+### 📁 Servicios_Cloud
+Proyectos del curso "Servicios Cloud" (FUNDAE). Incluyen despliegue de instancias EC2, configuración segura de acceso remoto, y tareas básicas de administración de entornos cloud con AWS.
 
 ## Sobre los proyectos
 
