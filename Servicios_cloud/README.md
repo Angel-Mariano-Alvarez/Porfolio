@@ -7,7 +7,7 @@ Cada proyecto está documentado individualmente y refleja el enfoque técnico ad
 
 ## Proyectos incluidos
 
-### ☁️ Despliegue_Instancia_EC2_AWS
+### 1. Despliegue_Instancia_EC2_AWS
 - Lanzamiento de una instancia Ubuntu Server en AWS EC2.
 - Configuración personalizada del grupo de seguridad.
 - Conexión segura mediante clave `.pem`.
@@ -16,6 +16,16 @@ Cada proyecto está documentado individualmente y refleja el enfoque técnico ad
  [`Despliegue_Instancia_EC2_AWS`](./Despliegue_Instancia_EC2_AWS)
 
  Tecnologías: AWS EC2, SSH, Ubuntu Server  
+ Estado: Finalizado
+
+### 2. Almacenamiento Seguro en la Nube (AWS S3 y Google Cloud Storage)
+- Configuración y gestión de buckets privados y cifrados en AWS S3 y Google Cloud Storage.
+- Almacenamiento de información sensible con permisos estrictos.
+- Generación de enlaces seguros (URLs pre-firmadas en AWS con caducidad, y URLs autenticadas en GCP) para acceso controlado.
+
+ [`Almacenamiento_Seguro-AWS_GCP`](./Almacenamiento_Seguro-AWS_GCP)
+
+ Tecnologías: AWS S3, Google Cloud Storage, Seguridad en la Nube  
  Estado: Finalizado
 
 ---
