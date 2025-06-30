@@ -7,72 +7,72 @@ Cada proyecto está documentado de forma individual, describiendo su objetivo, h
 
 ## Proyectos incluidos
 
-### 🛒 Tienda Online (Nivel 3)
+### 1. Tienda Online (Nivel 3)
 - Modelado entidad-relación y normalización.
 - Creación de base de datos, inserción de datos y consultas SQL complejas.
 - Enunciado resuelto con distintas herramientas (SQL Server, Oracle).
 
-📂 [`Tienda_Online`](./Tienda_Online)  
-🛠️ Tecnologías: SQL Server, Oracle  
-📌 Estado: Finalizado
+ [`Tienda_Online`](./Tienda_Online)  
+ Tecnologías: SQL Server, Oracle  
+ Estado: Finalizado
 
 ---
 
-### 📚 Gestión de libros en MongoDB (Nivel 4)
+### 2.estión de libros en MongoDB (Nivel 4)
 - Inserción, filtrado y exportación de colecciones en MongoDB.
 - Proyecto introductorio sobre bases de datos NoSQL.
 
-📂 [`MongoDB`](./MongoDB)  
-🛠️ Tecnologías: MongoDB  
-📌 Estado: Finalizado
+ [`MongoDB`](./MongoDB)  
+ Tecnologías: MongoDB  
+ Estado: Finalizado
 
 ---
 
-### 🌐 Aplicación Web con Flask y Google Cloud SQL (Nivel 4)
+### 3.plicación Web con Flask y Google Cloud SQL (Nivel 4)
 - Backend con Python (Flask) y despliegue conectado a base de datos en Google Cloud.
 - Operaciones básicas sobre una tabla de productos.
 
-📂 [`Aplicacion_Web`](./Aplicacion_Web)  
-🛠️ Tecnologías: Flask, SQL, Google Cloud  
-📌 Estado: Finalizado
+ [`Aplicacion_Web`](./Aplicacion_Web)  
+ Tecnologías: Flask, SQL, Google Cloud  
+ Estado: Finalizado
 
 ---
 
-### 🧮 Optimización de consultas en SQL Server (Nivel 5)
+### 4.ptimización de consultas en SQL Server (Nivel 5)
 - Análisis de rendimiento de consultas.
 - Aplicación de índices y estudio de su impacto.
 
-📂 [`Optimizacion_SQL_Server`](./Optimizacion_SQL_Server)  
-🛠️ Tecnologías: SQL Server  
-📌 Estado: Finalizado
+ [`Optimizacion_SQL_Server`](./Optimizacion_SQL_Server)  
+ Tecnologías: SQL Server  
+ Estado: Finalizado
 
 ---
 
-### 🧾 Procedimientos almacenados en Oracle (Nivel 5)
+### 5.rocedimientos almacenados en Oracle (Nivel 5)
 - Uso de PL/SQL para implementar lógica sobre una base de datos de facturación.
 - Procedimientos y triggers.
 
-📂 [`PLSQL_Oracle`](./PLSQL_Oracle)  
-🛠️ Tecnologías: Oracle  
-📌 Estado: Finalizado
+ [`PLSQL_Oracle`](./PLSQL_Oracle)  
+ Tecnologías: Oracle  
+ Estado: Finalizado
 
 ---
 
-### 🌍 MongoDB avanzado – Reto Tienda Online (Nivel 6)
+### 6.MongoDB avanzado – Reto Tienda Online (Nivel 6)
 - Índices, replicación, despliegue en Atlas, monitoreo y seguridad en MongoDB.
 
-📂 [`MongoDB_Avanzado`](./MongoDB_Avanzado)  
-🛠️ Tecnologías: MongoDB Atlas  
-📌 Estado: Finalizado
+ [`MongoDB_Avanzado`](./MongoDB_Avanzado)  
+ Tecnologías: MongoDB Atlas  
+ Estado: Finalizado
 
 ---
 
-### 🔐 Seguridad y encriptación en MySQL (Nivel 6)
+### 7.Seguridad y encriptación en MySQL (Nivel 6)
 - Configuración de políticas de contraseñas y cifrado de comunicaciones en entorno MySQL.
 
-📂 [`Seguridad_MySQL`](./Seguridad_MySQL)  
-🛠️ Tecnologías: MySQL  
-📌 Estado: Finalizado
+ [`Seguridad_MySQL`](./Seguridad_MySQL)  
+ Tecnologías: MySQL  
+ Estado: Finalizado
 
 ---
 
