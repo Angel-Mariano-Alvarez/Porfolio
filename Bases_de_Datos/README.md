@@ -1,27 +1,80 @@
 
 # Proyectos de Bases de Datos
 
-## Descripción
-Esta carpeta reúne los proyectos realizados durante el curso completo de **Sistemas Gestores de Bases de Datos (150 horas)**, organizado por FUNDAE – Código Samurái, finalizado en junio de 2025. A lo largo de seis niveles formativos, se desarrollaron proyectos prácticos que abarcan desde el diseño relacional básico hasta técnicas avanzadas de optimización, programación en Oracle, administración y seguridad en entornos SQL y NoSQL.
+Esta carpeta reúne los proyectos realizados durante el curso completo de **Sistemas Gestores de Bases de Datos (150 horas)**, organizado por FUNDAE. A lo largo de seis niveles formativos, se desarrollaron proyectos prácticos que abarcan desde el diseño relacional básico hasta técnicas avanzadas de optimización, programación en Oracle, administración y seguridad en entornos SQL y NoSQL.
 
-Los proyectos están estructurados por temática y dificultad creciente, y están documentados para demostrar conocimientos aplicados en entornos reales de trabajo.
+Cada proyecto está documentado de forma individual, describiendo su objetivo, herramientas empleadas y su relevancia en la formación técnica.
 
 ## Proyectos incluidos
 
-### Nivel 3
-- **Tienda Online**: Modelado entidad-relación, normalización y consultas SQL complejas.
+### 🛒 Tienda Online (Nivel 3)
+- Modelado entidad-relación y normalización.
+- Creación de base de datos, inserción de datos y consultas SQL complejas.
+- Enunciado resuelto con distintas herramientas (SQL Server, Oracle).
 
-### Nivel 4
-- **Gestión de libros en MongoDB**: Inserción, filtrado y exportación de datos en MongoDB.
-- **Aplicación Web con Flask y Google Cloud SQL**: Desarrollo de backend conectado a una BBDD relacional en la nube.
+📂 [`Tienda_Online`](./Tienda_Online)  
+🛠️ Tecnologías: SQL Server, Oracle  
+📌 Estado: Finalizado
 
-### Nivel 5
-- **Optimización de consultas en SQL Server**: Análisis y mejora de rendimiento usando índices.
-- **Procedimientos almacenados en Oracle**: Implementación de operaciones CRUD mediante PL/SQL.
+---
 
-### Nivel 6
-- **MongoDB avanzado – Reto Tienda Online**: Índices, replicación, despliegue en Atlas, monitoreo y seguridad.
-- **Seguridad y encriptación en MySQL**: Encriptación en tránsito y en reposo, políticas de contraseñas seguras.
+### 📚 Gestión de libros en MongoDB (Nivel 4)
+- Inserción, filtrado y exportación de colecciones en MongoDB.
+- Proyecto introductorio sobre bases de datos NoSQL.
+
+📂 [`MongoDB`](./MongoDB)  
+🛠️ Tecnologías: MongoDB  
+📌 Estado: Finalizado
+
+---
+
+### 🌐 Aplicación Web con Flask y Google Cloud SQL (Nivel 4)
+- Backend con Python (Flask) y despliegue conectado a base de datos en Google Cloud.
+- Operaciones básicas sobre una tabla de productos.
+
+📂 [`Aplicacion_Web`](./Aplicacion_Web)  
+🛠️ Tecnologías: Flask, SQL, Google Cloud  
+📌 Estado: Finalizado
+
+---
+
+### 🧮 Optimización de consultas en SQL Server (Nivel 5)
+- Análisis de rendimiento de consultas.
+- Aplicación de índices y estudio de su impacto.
+
+📂 [`Optimizacion_SQL_Server`](./Optimizacion_SQL_Server)  
+🛠️ Tecnologías: SQL Server  
+📌 Estado: Finalizado
+
+---
+
+### 🧾 Procedimientos almacenados en Oracle (Nivel 5)
+- Uso de PL/SQL para implementar lógica sobre una base de datos de facturación.
+- Procedimientos y triggers.
+
+📂 [`PLSQL_Oracle`](./PLSQL_Oracle)  
+🛠️ Tecnologías: Oracle  
+📌 Estado: Finalizado
+
+---
+
+### 🌍 MongoDB avanzado – Reto Tienda Online (Nivel 6)
+- Índices, replicación, despliegue en Atlas, monitoreo y seguridad en MongoDB.
+
+📂 [`MongoDB_Avanzado`](./MongoDB_Avanzado)  
+🛠️ Tecnologías: MongoDB Atlas  
+📌 Estado: Finalizado
+
+---
+
+### 🔐 Seguridad y encriptación en MySQL (Nivel 6)
+- Configuración de políticas de contraseñas y cifrado de comunicaciones en entorno MySQL.
+
+📂 [`Seguridad_MySQL`](./Seguridad_MySQL)  
+🛠️ Tecnologías: MySQL  
+📌 Estado: Finalizado
+
+---
 
 ## Estado del repositorio
 - [x] Curso completo finalizado (150 horas)
