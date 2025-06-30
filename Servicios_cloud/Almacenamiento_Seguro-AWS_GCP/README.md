@@ -48,7 +48,7 @@ Aquí se incluyen las capturas de pantalla que validan la implementación y las 
 * **Verificación de Permisos (No Público):**
     * ![Captura de Permisos AWS](Captura_PermisosAWS.PNG)
 * **Generación de URL Pre-firmada (1 Hora):**
-    * ![Captura de URL Pre-firmada AWS](Captura_UrlAWS.jpg)
+    * ![Captura de URL Pre-firmada AWS](Captura_UrlAWS.PNG)
 
 ### Google Cloud Storage
 * **Creación del Bucket y Control de Acceso Uniforme:**
