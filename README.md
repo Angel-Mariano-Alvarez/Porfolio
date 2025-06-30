@@ -15,13 +15,13 @@ Este repositorio forma parte de mi porfolio personal. Aquí encontrarás una rec
 
 ## Organización del porfolio
 
-### 📁 Bases_de_Datos(https://github.com/Angel-Mariano-Alvarez/Porfolio/tree/main/Bases_de_Datos)
+### 📁 Bases_de_Datos** [Ver Carpeta](https://github.com/Angel-Mariano-Alvarez/Porfolio/tree/main/Bases_de_Datos)
 Proyectos desarrollados en el curso "Sistemas Gestores de Bases de Datos" (150 h, FUNDAE). Incluye modelado, consultas, procedimientos almacenados, aplicaciones conectadas a bases de datos en la nube y seguridad.
 
-### 📁 Proyectos_de_Ciberseguridad(https://github.com/Angel-Mariano-Alvarez/Porfolio/tree/main/Proyectos_de_Ciberseguridad)
+### 📁 Proyectos_de_Ciberseguridad** [Ver Carpeta](https://github.com/Angel-Mariano-Alvarez/Porfolio/tree/main/Proyectos_de_Ciberseguridad)
 Ejercicios realizados en el curso IFCT0050 – Seguridad informática (SEPE). Simulan escenarios reales de análisis de vulnerabilidades, tráfico de red y exposición pública.
 
-### 📁 Servicios_Cloud(https://github.com/Angel-Mariano-Alvarez/Porfolio/tree/main/Servicios_cloud)
+### 📁 Servicios_Cloud** [Ver Carpeta](https://github.com/Angel-Mariano-Alvarez/Porfolio/tree/main/Servicios_cloud)
 Proyectos del curso "Servicios Cloud" (FUNDAE). Incluyen despliegue de instancias EC2, configuración segura de acceso remoto, y tareas básicas de administración de entornos cloud con AWS.
 
 ## Sobre los proyectos
