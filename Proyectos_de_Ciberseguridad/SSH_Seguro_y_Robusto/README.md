@@ -14,7 +14,7 @@ El ejercicio aborda la configuración de múltiples capas de seguridad, incluyen
 
 Este proyecto ha sido **finalizado** con éxito, demostrando la aplicación práctica de conceptos de seguridad avanzada en un entorno controlado.
 
-## 🛠️ Tecnologías y Herramientas Utilizadas
+##  Tecnologías y Herramientas Utilizadas
 
 * **Sistema Operativo:** Kali Linux (Máquina Virtual)
 * **Servicio de Acceso Remoto:** OpenSSH Server
@@ -24,7 +24,7 @@ Este proyecto ha sido **finalizado** con éxito, demostrando la aplicación prá
 * **Generación de Claves:** SSH-keygen
 * **Cliente SSH (Windows):** PuTTY (para pruebas de conexión)
 
-## 🚀 Fases del Ejercicio e Implementación Detallada
+##  Fases del Ejercicio e Implementación Detallada
 
 A continuación, se describen las fases clave de la implementación, los pasos realizados y los principales hallazgos y configuraciones.
 
