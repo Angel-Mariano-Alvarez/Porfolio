@@ -1,6 +1,6 @@
 # SSH Seguro y Robusto: Autenticación por Clave Pública, Banner Legal, UFW, Fail2ban y Port Knocking
 
-## 📝 Descripción del Proyecto
+##  Descripción del Proyecto
 
 Este proyecto forma parte del curso "Seguridad Informática (IFCT0109) - Seguridad en equipos informáticos (MF0486_3)" del SEPE. Se centra en la **implementación de un entorno SSH (Secure Shell) avanzado y altamente seguro en una máquina Kali Linux**, con el objetivo principal de fortalecer el acceso remoto al servidor, protegerlo contra ataques comunes y mantener una postura de seguridad proactiva.
 
