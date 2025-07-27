@@ -37,7 +37,7 @@ Cada proyecto está documentado individualmente y refleja el enfoque técnico ad
 - Creación de una **Plantilla de Instancia** en GCP para asegurar despliegues consistentes y replicables.
 - **Estudio de caso práctico:** Diagnóstico y resolución de una cadena de problemas realistas de red, permisos y configuración en el entorno de despliegue.
 
-[`proyecto-gcp-angel`](./proyecto-gcp-angel)
+[`Despliegue_App_Flask_Cloud`](./Despliegue_App_Flask_Cloud)
 
 **Tecnologías:** GCP Compute Engine, Python, Flask, Gunicorn, Git, SSH  
 **Estado:** Finalizado
