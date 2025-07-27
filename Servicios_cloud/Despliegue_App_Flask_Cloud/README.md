@@ -1,102 +1,92 @@
-# Despliegue App Flask en Google Cloud
+# Despliegue Automatizado de una Aplicación Flask en Google Cloud
 
 ## Descripción del Proyecto
 
-Este proyecto forma parte del curso **"Servicios Cloud" de FUNDAE**, y corresponde a los retos 7, 8 y 9 del nivel 4. Se ha desarrollado una aplicación Flask y se ha desplegado con éxito en **Google Cloud Platform (GCP)**, usando una **instancia VM**, una **plantilla** y un **grupo de instancias gestionado**, todo ello mediante la configuración de **startup scripts** y la apertura de puertos adecuados.
+Este proyecto demuestra el proceso de despliegue automatizado de una aplicación web desarrollada con Python y Flask en una máquina virtual de **Google Cloud Platform (GCP)**.
 
-Este README documenta de forma organizada todos los pasos realizados y se apoya en capturas de pantalla agrupadas en la carpeta `Capturas_pantalla`.
+El objetivo principal es encapsular toda la configuración e instalación de dependencias dentro de una **Plantilla de Instancia (Instance Template)**, permitiendo la creación rápida y consistente de nuevos servidores listos para funcionar sin intervención manual. Este documento no solo muestra el resultado final, sino que también sirve como un apéndice detallado del proceso.
 
-## Estructura del Proyecto
+![Verificación final de la aplicación en el navegador](Capturas_pantalla/07-verificacion_navegador.png)
 
-Despliegue_App_Flask_Cloud/
-│
-├── Capturas_pantalla/
-│   ├── 01-startup_sh.PNG
-│   ├── 02-configuracion_instancia.png
-│   ├── 03-so_firewall.PNG
-│   ├── 04-verificacion_archivos.png
-│   ├── 05-instancia_creada.PNG
-│   ├── 06-ejecucion_startup_sh.png
-│   ├── 07-verificacion_navegador.png
-│   ├── 08.01_nombre_region_plantilla.PNG
-│   ├── 08.02_maquina_plantilla.PNG
-│   ├── 08.03_firewall_plantilla.PNG
-│   ├── 08.03_script_plantilla.PNG
-│
-├── app.py
-├── requirements.txt
-├── startup.sh
-└── README.md
+---
 
-## Pasos Realizados
+## Arquitectura y Proceso
 
-### 1. Preparación del entorno
+El despliegue se basa en los siguientes componentes clave de GCP:
 
-- Se creó una carpeta en la instancia `/home/angel/app` y se subieron los archivos:
-  - `app.py`: aplicación Flask.
-  - `requirements.txt`: con las dependencias necesarias (`Flask`, `gunicorn`).
-  - `startup.sh`: script de arranque para lanzar automáticamente la app con Gunicorn.
+1.  **Aplicación Flask:** Una aplicación web simple que sirve como carga de trabajo.
+2.  **Startup Script:** Un script de shell (`startup.sh`) que automatiza todas las tareas de configuración del servidor.
+3.  **Compute Engine VM:** Una máquina virtual `e2-micro` basada en Debian que aloja la aplicación.
+4.  **Plantilla de Instancia:** El "molde" que contiene toda la configuración de la VM, permitiendo despliegues replicables.
 
-📸 Captura recomendada: `01-startup_sh.PNG`
+---
 
-### 2. Creación de la instancia
+## Tecnologías Utilizadas
+* Google Cloud Platform (GCP)
+* Python (con Flask)
+* Gunicorn
+* Git y GitHub
+* Linux (Debian)
+* SSH
 
-- Se creó una **VM en GCP** con sistema operativo Debian y tipo `e2-micro`.
-- Se activó el **acceso HTTP** desde el firewall.
-- Se comprobó que los archivos estuvieran bien ubicados dentro de la instancia.
+---
+## Mejoras Futuras (Retos 8 y 9)
 
-📸 Capturas recomendadas:
-- `02-configuracion_instancia.png`
-- `03-so_firewall.PNG`
-- `04-verificacion_archivos.png`
-- `05-instancia_creada.PNG`
+Este proyecto sienta las bases para futuras mejoras que implementarían una arquitectura de alta disponibilidad y escalabilidad:
+* **Crear un Grupo de Instancias Gestionado (MIG):** Usar la plantilla creada para desplegar y gestionar múltiples instancias.
+* **Configurar el Autoescalado:** Añadir una política de autoescalado al MIG para que responda a los cambios en la carga.
+* **Implementar un Balanceador de Carga:** Configurar un Balanceador de Carga para distribuir el tráfico entre las instancias.
 
-### 3. Ejecución y prueba de la app
+---
+## Apéndice: Proceso Detallado de Despliegue
 
-- Se instaló manualmente el entorno:
-  ```bash
-  sudo apt update
-  sudo apt install python3-pip
-  pip install flask gunicorn
-  ```
-- Se dio permiso de ejecución al script y se ejecutó:
-  ```bash
-  chmod +x startup.sh
-  ./startup.sh
-  ```
-- Se verificó la ejecución de la app accediendo desde el navegador a la IP externa.
+A continuación, se documenta el proceso detallado llevado a cabo para lograr el despliegie.
 
-📸 Capturas recomendadas:
-- `06-ejecucion_startup_sh.png`
-- `07-verificacion_navegador.png`
+### 1. Creación del Script de Automatización (`startup.sh`)
+El primer paso fue crear un script de shell para automatizar toda la configuración del servidor. Este script se encarga de instalar las dependencias y lanzar la aplicación con Gunicorn en el puerto 8080.
 
-### 4. Automatización del despliegue con plantilla
+![Código del Startup Script](Capturas_pantalla/01-startup_sh.PNG)
 
-- Se creó una **plantilla de instancia** especificando:
-  - Nombre, zona y tipo de máquina
-  - Script de inicio completo
-  - Puertos abiertos vía firewall
-- Se revisó que el script estuviera copiado completo en la plantilla.
+### 2. Creación de una Instancia de VM de Prueba
+Para validar el proceso, primero se desplegó una única máquina virtual (`vm-flask-app`).
 
-📸 Capturas recomendadas:
-- `08.01_nombre_region_plantilla.PNG`
-- `08.02_maquina_plantilla.PNG`
-- `08.03_firewall_plantilla.PNG`
-- `08.03_script_plantilla.PNG`
+* **Configuración general de la instancia:**
+![Configuración general de la instancia](Capturas_pantalla/02-configuracion_instancia.png)
 
-### 5. Despliegue final con grupo de instancias gestionado
+* **Configuración del Firewall y Red:** Se permitió el tráfico HTTP para aplicar la etiqueta `http-server`.
+![Configuración del Firewall de la instancia](Capturas_pantalla/03-so_firewall.PNG)
 
-- Se configuró un grupo de instancias a partir de la plantilla.
-- Se comprobó el estado del grupo, y que la app se lanzaba automáticamente.
-- Se accedió desde el navegador para validar el funcionamiento.
+### 3. Verificación y Ejecución Manual
+Se accedió por SSH a la instancia para verificar la subida de archivos y ejecutar el script manualmente, validando su funcionamiento.
 
-ℹ️ Se decidió **no añadir capturas de esta fase** al porfolio por su carácter repetitivo.
+* **Verificación de archivos en el servidor:**
+![Verificación de archivos por SSH](Capturas_pantalla/04-verificacion_archivos.png)
 
-## Notas para el porfolio
+* **Ejecución manual del script de inicio:**
+![Ejecución del script por SSH](Capturas_pantalla/06-ejecucion_startup_sh.jpg)
 
-- Este proyecto demuestra la capacidad de desplegar una aplicación web real en GCP.
-- Las capturas más relevantes han sido seleccionadas y nombradas siguiendo la estructura lógica del despliegue.
-- El script `startup.sh` y el uso de Gunicorn aseguran un despliegue robusto y profesional.
+* **Instancia creada y con IP pública asignada:**
+![Instancia creada en la consola de GCP](Capturas_pantalla/05-instancia_creada.PNG)
+
+### 4. Creación de la Plantilla de Instancia (Automatización Final)
+Con el método validado, se procedió a crear una Plantilla de Instancia para automatizar el proceso.
+
+* **Nombre y Región de la Plantilla:**
+![Nombre y Región de la Plantilla](Capturas_pantalla/08.01_nombre_region_plantilla.PNG)
+
+* **Selección del Tipo de Máquina (`e2-micro`):**
+![Selección de Máquina para la Plantilla](Capturas_pantalla/08.02_maquina_plantilla.PNG)
+
+* **Configuración del Firewall en la Plantilla:**
+![Configuración del Firewall en la Plantilla](Capturas_pantalla/08.03_firewall_plantilla.PNG)
+
+* **Inclusión del Script de Inicio en la Plantilla:**
+![Inclusión del Script en la Plantilla](Capturas_pantalla/08.03_script_plantilla.PNG)
+
+### 5. Verificación Final en el Navegador
+El resultado final es el despliegue exitoso de la aplicación, accesible a través de su IP pública en el puerto 8080.
+
+![Verificación final de la aplicación en el navegador](Capturas_pantalla/07-verificacion_navegador.png)
 
 ## Estado del Proyecto
 
