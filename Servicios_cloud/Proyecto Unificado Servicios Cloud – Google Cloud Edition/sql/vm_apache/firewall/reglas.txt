@@ -1,0 +1,6 @@
+Regla: pusc-gce-allow-http
+Red: default
+Dirección: INGRESS
+Prioridad: 1000
+Permite: tcp:80
+Etiqueta destino: http-server
