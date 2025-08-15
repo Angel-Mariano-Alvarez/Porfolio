@@ -58,6 +58,19 @@ print("DB inicializada en:", db_path)
 PY
 sudo sed -i "s|__APP_DIR__|${APP_DIR}|g" /etc/systemd/system/gcmulti.service
 
+# Asegurar permisos del proyecto y preparar BD como 'gcmulti'
+sudo chown -R gcmulti:gcmulti "${PROJECT_DIR}"
+sudo -u gcmulti python3 - <<'PY'
+import os, sqlite3, pathlib
+base = pathlib.Path("__APP_DIR__").resolve().parent
+db_path = base / "db" / "app.sqlite"
+schema = (base / "db" / "schema.sql").read_text()
+db_path.parent.mkdir(parents=True, exist_ok=True)
+with sqlite3.connect(db_path.as_posix()) as conn:
+    conn.executescript(schema)
+print("DB inicializada en:", db_path)
+PY
+
 # Recargar systemd
 sudo systemctl daemon-reload
 
