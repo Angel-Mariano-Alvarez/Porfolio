@@ -24,7 +24,6 @@ A medida que avance en el curso de Seguridad Informática del SEPE (IFCT0050) y 
 * **Estado:** Completado (ejercicio realizado en entorno de laboratorio en clase).
 * **Enlace al Proyecto:**  [ver Proyecto](https://github.com/Angel-Mariano-Alvarez/Porfolio/tree/main/Proyectos_de_Ciberseguridad/An%C3%A1lisis_de_Tr%C3%A1fico_de_Red_con_Wireshark)
 
-
 ### 4. SSH Seguro y Robusto: Clave Pública, Banner Legal, UFW, Fail2Ban y Port Knocking
 * **Descripción:** Proyecto integral de hardening del acceso SSH en Kali Linux. Incluye cambio de puerto, desactivación de login por root, autenticación por clave pública, configuración de firewall UFW, sistema de port knocking con knockd y protección contra fuerza bruta con Fail2Ban. Además, se incorpora un banner legal, un sistema de monitorización de logs en tiempo real y secuencias de emergencia.
 * **Tecnologías Clave:** Kali Linux, OpenSSH, UFW, Fail2Ban, Knockd, SSH-keygen, PuTTY.
@@ -41,6 +40,6 @@ A medida que avance en el curso de Seguridad Informática del SEPE (IFCT0050) y 
 -   [ ] Posible inclusión de proyectos personales o de otras formaciones en ciberseguridad.
 
 ---
-> Angel Mariano Álvarez López
-> angelmarianoalvarez@gmail.com
+> Angel Mariano Álvarez López  
+> angelmarianoalvarez@gmail.com  
 > [LinkedIn](https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit)
