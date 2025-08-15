@@ -1,84 +1,72 @@
+# Bases de Datos – Proyectos por Niveles
 
-# Proyectos de Bases de Datos
-
-Esta carpeta reúne los proyectos realizados durante el curso completo de **Sistemas Gestores de Bases de Datos (150 horas)**, organizado por FUNDAE. A lo largo de seis niveles formativos, se desarrollaron proyectos prácticos que abarcan desde el diseño relacional básico hasta técnicas avanzadas de optimización, programación en Oracle, administración y seguridad en entornos SQL y NoSQL.
-
-Cada proyecto está documentado de forma individual, describiendo su objetivo, herramientas empleadas y su relevancia en la formación técnica.
-
-## Proyectos incluidos
-
-### 1. Tienda Online (Nivel 3)
-- Modelado entidad-relación y normalización.
-- Creación de base de datos, inserción de datos y consultas SQL complejas.
-- Enunciado resuelto con distintas herramientas (SQL Server, Oracle).
-
- [`Tienda_Online`](./Tienda_Online)  
- Tecnologías: SQL Server, Oracle  
- Estado: Finalizado
+Esta carpeta recopila los ejercicios y proyectos desarrollados en el curso **Sistemas Gestores de Bases de Datos (FUNDAE)**.  
+El enfoque es **práctico y documentado**, con proyectos organizados por niveles que incluyen desde tareas iniciales de modelado hasta administración avanzada y optimización.  
+Cada proyecto cuenta con su propio README con capturas, scripts y pasos para su reproducción.
 
 ---
 
-### 2.estión de libros en MongoDB (Nivel 4)
-- Inserción, filtrado y exportación de colecciones en MongoDB.
-- Proyecto introductorio sobre bases de datos NoSQL.
+## Nivel 3
 
- [`MongoDB`](./MongoDB)  
- Tecnologías: MongoDB  
- Estado: Finalizado
-
----
-
-### 3.plicación Web con Flask y Google Cloud SQL (Nivel 4)
-- Backend con Python (Flask) y despliegue conectado a base de datos en Google Cloud.
-- Operaciones básicas sobre una tabla de productos.
-
- [`Aplicacion_Web`](./Aplicacion_Web)  
- Tecnologías: Flask, SQL, Google Cloud  
- Estado: Finalizado
+### 1) Tienda_Online
+- **Descripción:** Modelado, creación y consultas SQL de una base de datos para una tienda online, incluyendo gestión de productos, clientes y pedidos.
+- **Tecnologías:** MySQL, SQL
+- **Estado:** ✅ Finalizado  
+[👉 Abrir proyecto](./Tienda_Online)
 
 ---
 
-### 4.ptimización de consultas en SQL Server (Nivel 5)
-- Análisis de rendimiento de consultas.
-- Aplicación de índices y estudio de su impacto.
+## Nivel 4
 
- [`Optimizacion_SQL_Server`](./Optimizacion_SQL_Server)  
- Tecnologías: SQL Server  
- Estado: Finalizado
+### 2) MongoDB
+- **Descripción:** Creación y gestión de bases de datos NoSQL en MongoDB, con operaciones CRUD y agregaciones básicas.
+- **Tecnologías:** MongoDB
+- **Estado:** ✅ Finalizado  
+[👉 Abrir proyecto](./MongoDB)
 
----
-
-### 5.rocedimientos almacenados en Oracle (Nivel 5)
-- Uso de PL/SQL para implementar lógica sobre una base de datos de facturación.
-- Procedimientos y triggers.
-
- [`PLSQL_Oracle`](./PLSQL_Oracle)  
- Tecnologías: Oracle  
- Estado: Finalizado
+### 3) Aplicacion_Web
+- **Descripción:** Desarrollo de aplicación web conectada a base de datos, con operaciones CRUD y gestión de usuarios.
+- **Tecnologías:** MySQL, PHP/HTML/CSS
+- **Estado:** ✅ Finalizado  
+[👉 Abrir proyecto](./Aplicacion_Web)
 
 ---
 
-### 6.MongoDB avanzado – Reto Tienda Online (Nivel 6)
-- Índices, replicación, despliegue en Atlas, monitoreo y seguridad en MongoDB.
+## Nivel 5
 
- [`MongoDB_Avanzado`](./MongoDB_Avanzado)  
- Tecnologías: MongoDB Atlas  
- Estado: Finalizado
+### 4) Optimizacion_SQL_Server
+- **Descripción:** Análisis y optimización de consultas en SQL Server mediante índices, planes de ejecución y mejoras de rendimiento.
+- **Tecnologías:** SQL Server
+- **Estado:** ✅ Finalizado  
+[👉 Abrir proyecto](./Optimizacion_SQL_Server)
+
+### 5) PLSQL_Oracle
+- **Descripción:** Creación de procedimientos almacenados, funciones y triggers en Oracle utilizando PL/SQL.
+- **Tecnologías:** Oracle, PL/SQL
+- **Estado:** ✅ Finalizado  
+[👉 Abrir proyecto](./PLSQL_Oracle)
 
 ---
 
-### 7.Seguridad y encriptación en MySQL (Nivel 6)
-- Configuración de políticas de contraseñas y cifrado de comunicaciones en entorno MySQL.
+## Nivel 6
 
- [`Seguridad_MySQL`](./Seguridad_MySQL)  
- Tecnologías: MySQL  
- Estado: Finalizado
+### 6) MongoDB_Avanzado
+- **Descripción:** Operaciones avanzadas en MongoDB, incluyendo agregaciones complejas, índices y optimización de consultas.
+- **Tecnologías:** MongoDB
+- **Estado:** ✅ Finalizado  
+[👉 Abrir proyecto](./MongoDB_Avanzado)
+
+### 7) Seguridad_MySQL
+- **Descripción:** Configuración de usuarios, privilegios y cifrado en MySQL para mejorar la seguridad de la base de datos.
+- **Tecnologías:** MySQL
+- **Estado:** ✅ Finalizado  
+[👉 Abrir proyecto](./Seguridad_MySQL)
 
 ---
 
 ## Estado del repositorio
+- [x] Proyectos finalizados y documentados por nivel
 - [x] Curso completo finalizado (150 horas)
-- [x] Proyectos documentados por nivel
 - [x] Prácticas alineadas con entornos reales y herramientas profesionales
 
 ## Autor
