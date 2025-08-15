@@ -1,53 +1,61 @@
-# Proyectos de Servicios Cloud
+# Servicios Cloud – Proyectos por Niveles
 
-Esta carpeta contiene los ejercicios y proyectos realizados durante el curso **Servicios Cloud** impartido por FUNDAE. A lo largo del curso se aplican conocimientos prácticos sobre el uso de proveedores de servicios en la nube como **Google Cloud Platform (GCP)** y **Amazon Web Services (AWS)**, desde la creación de instancias hasta configuraciones seguras y despliegue de servicios.
-
-Cada proyecto está documentado individualmente y refleja el enfoque técnico adoptado, herramientas utilizadas y buenas prácticas en entornos cloud.
-
-## Proyectos por Nivel
-
-### Nivel 3
-
-#### 1. Despliegue de Instancia EC2 en AWS
-- Lanzamiento de una instancia Ubuntu Server en AWS EC2.
-- Configuración personalizada del grupo de seguridad.
-- Conexión segura mediante clave `.pem`.
-- Eliminación de la autenticación por contraseña vía SSH (hardening básico).
-
-[`Despliegue_Instancia_EC2_AWS`](./Despliegue_Instancia_EC2_AWS)
-
-**Tecnologías:** AWS EC2, SSH, Ubuntu Server  
-**Estado:** Finalizado
-
-#### 2. Almacenamiento Seguro en la Nube
-- Configuración y gestión de buckets privados y cifrados en AWS S3 y Google Cloud Storage.
-- Almacenamiento de información sensible con permisos estrictos.
-- Generación de enlaces seguros (URLs pre-firmadas en AWS y URLs autenticadas en GCP) para acceso controlado.
-
-[`Almacenamiento_Seguro-AWS_GCP`](./Almacenamiento_Seguro-AWS_GCP)
-
-**Tecnologías:** AWS S3, Google Cloud Storage, Seguridad en la Nube  
-**Estado:** Finalizado
+Esta carpeta reúne los ejercicios y proyectos desarrollados en el curso **Servicios Cloud (FUNDAE)**. El enfoque es **práctico y documentado**, priorizando buenas prácticas de despliegue, seguridad básica y control de costes (free tier cuando es posible). Cada proyecto incluye su propio README con capturas y pasos reproducibles.
 
 ---
-### Nivel 4
 
-#### 3. Despliegue Automatizado de una App Flask en GCP
-- Automatización del despliegue de una aplicación web Python/Flask mediante un **script de inicio (startup script)**.
-- Creación de una **Plantilla de Instancia** en GCP para asegurar despliegues consistentes y replicables.
-- **Estudio de caso práctico:** Diagnóstico y resolución de una cadena de problemas realistas de red, permisos y configuración en el entorno de despliegue.
+## Nivel 3
 
-[`Despliegue_App_Flask_Cloud`](./Despliegue_App_Flask_Cloud)
+### 1) Despliegue_Instancia_EC2_AWS
+- **Descripción:** Puesta en marcha de una instancia Ubuntu en **AWS EC2** con acceso SSH mediante clave `.pem` y hardening básico (deshabilitar contraseña).
+- **Tecnologías:** AWS EC2, Ubuntu, SSH
+- **Estado:** ✅ Finalizado  
+[👉 Abrir proyecto](./Despliegue_Instancia_EC2_AWS)
 
-**Tecnologías:** GCP Compute Engine, Python, Flask, Gunicorn, Git, SSH  
-**Estado:** Finalizado
+### 2) Almacenamiento_Seguro-AWS_GCP
+- **Descripción:** Configuración de buckets **privados** y **cifrados** en **AWS S3** y **Google Cloud Storage**, con control de acceso y enlaces firmados/auténticados.
+- **Tecnologías:** AWS S3, Google Cloud Storage, IAM/ACLs
+- **Estado:** ✅ Finalizado  
+[👉 Abrir proyecto](./Almacenamiento_Seguro-AWS_GCP)
+
+---
+
+## Nivel 4
+
+### 3) Despliegue_App_Flask_Cloud
+- **Descripción:** Despliegue inicial de aplicación **Flask** en nube, automatizando pasos comunes de instalación y prueba.
+- **Tecnologías:** GCP/AWS (según reto), Python, Flask, Gunicorn
+- **Estado:** ✅ Finalizado  
+[👉 Abrir proyecto](./Despliegue_App_Flask_Cloud)
+
+---
+
+## Nivel 5
+
+### 4) Proyecto Unificado Servicios Cloud – Google Cloud Edition
+- **Descripción:** Proyecto integrado en **Google Cloud** que combina almacenamiento, funciones y base de datos gestionada conectada a VM. Incluye seguridad y evidencias de funcionamiento.
+- **Tecnologías:** GCP (Storage, Cloud Functions, Cloud SQL, Compute Engine), VPC Firewall
+- **Estado:** ✅ Finalizado  
+[👉 Abrir proyecto](./Proyecto Unificado Servicios Cloud – Google Cloud Edition)
+
+---
+
+## Nivel 6
+
+### 5) Google_Cloud_MultiService_Nivel6
+- **Descripción:** API **Flask** + **SQLite** desplegada en **VM e2‑micro** (free tier), servicio `systemd`, regla de **firewall** por etiqueta, **backups** y guía de capturas.
+- **Tecnologías:** GCP Compute Engine, Flask, SQLite, systemd, VPC Firewall
+- **Estado:** ✅ Finalizado  
+[👉 Abrir proyecto](./Google_Cloud_MultiService_Nivel6)
 
 ---
 
 ## Estado del repositorio
-- [x] Proyectos finalizados y documentados.
-- [ ] Más ejercicios en desarrollo.
+- [x] Proyectos finalizados y documentados por nivel
+- [x] Curso completo finalizado (150 horas)
+- [x] Prácticas alineadas con entornos reales y herramientas profesionales
 
 ## Autor
 Ángel Mariano Álvarez López  
 📧 angelmarianoalvarez@gmail.com
+
