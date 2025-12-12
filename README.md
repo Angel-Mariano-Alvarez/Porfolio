@@ -5,7 +5,7 @@ La estructura está organizada por dominios tecnológicos. Cada carpeta contiene
 
 ---
 
-## 📁 [Proyectos_de_Ciberseguridad](./Proyectos_de_Ciberseguridad)
+## 📁 [Automatizaciones_y_Proyectos_de_Ciberseguridad](./Automatizaciones_y_Proyectos_de_Ciberseguridad)
 **⭐ Área Principal de Especialización.**
 Colección de laboratorios avanzados y desarrollo de herramientas de seguridad ofensiva/defensiva.
 * **Tooling & Automatización:** Desarrollo de scripts en Python para auditorías (ej: Generador de Informes con API NVD).
