@@ -36,7 +36,7 @@ Este repositorio se mantiene vivo y se irá actualizando periódicamente con nue
 * **Estado:** Completado (Desarrollo propio de Tooling).
 * **Enlace al Proyecto:** [Ver Proyecto](./Automatizador_Informes_Vulnerabilidades)
 
-### 6. Sistema de Alertas de Vulnerabilidad (NVD Scanner & Email Alerts)
+### 6. Automatizador Servidor ALerta Vulnerabilidades (NVD Scanner & Email Alerts)
 * **Descripción:** Servicio de vigilancia digital (Daemon) diseñado para la monitorización continua de nuevas vulnerabilidades. El sistema consulta la API del NIST en tiempo real, filtra CVEs críticos basándose en los fabricantes de la organización y envía alertas automáticas por correo electrónico. Implementa persistencia con SQLite, rotación de logs y medidas de seguridad operacional (OpSec) para despliegues en servidores Linux.
 * **Tecnologías Clave:** Python 3, Systemd (Linux Services), SQLite, NIST API, SMTP, Logging, Regex.
 * **Estado:** Completado (Desarrollo propio de Tooling & DevSecOps).
