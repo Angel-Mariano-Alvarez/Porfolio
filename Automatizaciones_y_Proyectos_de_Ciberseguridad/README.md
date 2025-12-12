@@ -1,8 +1,10 @@
 # Proyectos de Ciberseguridad
 
-Esta carpeta está dedicada a recopilar proyectos y ejercicios prácticos realizados en el ámbito de la seguridad informática y ciberseguridad. Mi objetivo es aplicar los conocimientos adquiridos, demostrando habilidades en el análisis de vulnerabilidades, configuración segura de sistemas, scripting para seguridad y otras áreas clave.
+# Automatizaciones y Proyectos de Ciberseguridad
 
-Este repositorio se mantiene vivo y se irá actualizando periódicamente con nuevos desarrollos propios, laboratorios y pruebas de concepto (PoC).
+Esta carpeta está dedicada a recopilar proyectos y ejercicios prácticos realizados en el ámbito de la seguridad informática y ciberseguridad, con un fuerte enfoque en la automatización de tareas y el desarrollo de herramientas propias (Tooling). Mi objetivo es demostrar habilidades técnicas en análisis de vulnerabilidades, scripting (Python/Bash), configuración segura (Hardening) y DevSecOps.
+
+Este repositorio se mantiene vivo y se irá actualizando periódicamente con nuevos desarrollos, laboratorios y pruebas de concepto (PoC).
 
 ## Proyectos Incluidos
 
