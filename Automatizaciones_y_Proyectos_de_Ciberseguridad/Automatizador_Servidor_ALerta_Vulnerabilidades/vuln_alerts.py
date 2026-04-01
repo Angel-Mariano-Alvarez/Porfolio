@@ -1,22 +1,4 @@
 #!/usr/bin/env python3
-"""
-NVD-Scanner - Sistema de Alertas de Vulnerabilidades CVE
-Versión: 3.0
-
-Correcciones aplicadas:
-- Claves de config.yaml sincronizadas (early_warning_sources, news_sources)
-- Orden corregido: email se envía ANTES de marcar alertas en BD
-- Formato de fecha NVD con zona horaria UTC explícita
-- Logging inicializado dentro de main() con ruta configurable
-- HTML injection prevenido con html.escape() en errores críticos
-- Manejo de excepciones robusto (sin bare except)
-- _is_recent() devuelve False por defecto (conservador)
-- KeywordMatcher sin doble normalización de texto (IGNORECASE)
-- After=network-online.target en el servicio systemd
-- TimeoutSec ampliado a 300s en el servicio
-- Typo "Nvidea" corregido a "Nvidia" en config.yaml
-- deep-translator con versión fijada en requirements.txt
-"""
 
 import os
 import html
@@ -93,8 +75,6 @@ class KeywordMatcher:
         Encontrar el primer keyword que coincida en el texto.
         Retorna el keyword original con su capitalización correcta.
 
-        CORRECCIÓN: Se eliminó 'text.lower()' — re.IGNORECASE es suficiente
-        y evitar la conversión reduce procesamiento innecesario.
         """
         if not self.regex or not text:
             return None
@@ -115,10 +95,10 @@ class ConfigLoader:
             with open(config_path, 'r', encoding='utf-8') as file:
                 self.config = yaml.safe_load(file) or {}
         except FileNotFoundError:
-            logging.error(f"❌ Archivo de configuración no encontrado: {config_path}")
+            logging.error(f"ERROR: Archivo de configuración no encontrado: {config_path}")
             sys.exit(1)
         except yaml.YAMLError as e:
-            logging.error(f"❌ Error parseando YAML: {e}")
+            logging.error(f" ERROR: parseando YAML: {e}")
             sys.exit(1)
 
     def get(self, key: str, default=None):
@@ -178,7 +158,7 @@ class DatabaseManager:
         except sqlite3.IntegrityError:
             logging.debug(f"CVE {cve_id} ya estaba registrado. Ignorando.")
         except sqlite3.OperationalError as e:
-            logging.error(f"❌ Error de BD al marcar {cve_id}: {e}")
+            logging.error(f" Error de BD al marcar {cve_id}: {e}")
             raise
 
     def cleanup_old_records(self, days: int = 180):
@@ -197,9 +177,9 @@ class DatabaseManager:
                 conn.commit()
 
             if deleted > 0:
-                logging.info(f"🧹 Mantenimiento DB: Se eliminaron {deleted} registros antiguos.")
+                logging.info(f" Mantenimiento DB: Se eliminaron {deleted} registros antiguos.")
         except Exception as e:
-            logging.error(f"❌ Error limpiando DB: {e}")
+            logging.error(f" Error limpiando DB: {e}")
 
 
 class BaseScanner:
@@ -214,17 +194,13 @@ class BaseScanner:
         try:
             return feedparser.parse(url)
         except Exception as e:
-            logging.error(f"❌ Error leyendo feed {url}: {e}")
+            logging.error(f" Error leyendo feed {url}: {e}")
             return None
 
     def _is_recent(self, entry: Any, hours: int = 24) -> bool:
         """
         Verificar si el entry es más reciente que N horas.
 
-        CORRECCIÓN: Devuelve False por defecto cuando no hay fecha
-        de publicación, en lugar de True. Esto evita procesar artículos
-        de fecha desconocida (potencialmente muy antiguos) como si fueran
-        recientes.
         """
         if hasattr(entry, 'published_parsed') and entry.published_parsed:
             try:
@@ -256,7 +232,7 @@ class NewsScanner(BaseScanner):
         """Escanear noticias de seguridad."""
         news_items = []
 
-        logging.info(f'📰 Escaneando noticias en {len(self.feeds)} fuentes...')
+        logging.info(f' Escaneando noticias en {len(self.feeds)} fuentes...')
 
         for url in self.feeds:
             feed = self._fetch_feed(url)
@@ -295,14 +271,13 @@ class EarlyWarningScanner(BaseScanner):
 
     def __init__(self, config: Dict[str, Any]):
         super().__init__(config)
-        # CORRECCIÓN: Clave sincronizada con config.yaml ('early_warning_sources')
         self.feeds = config.get('early_warning_sources', [])
 
     def scan(self) -> List[Dict[str, Any]]:
         """Escanear alertas tempranas."""
         early_alerts = []
 
-        logging.info(f'🚨 Escaneando alertas tempranas en {len(self.feeds)} fuentes...')
+        logging.info(f' Escaneando alertas tempranas en {len(self.feeds)} fuentes...')
 
         for url in self.feeds:
             feed = self._fetch_feed(url)
@@ -352,8 +327,6 @@ class NVDScanner(BaseScanner):
         """
         Escanear vulnerabilidades de NVD.
 
-        CORRECCIÓN: Las fechas ahora incluyen zona horaria UTC explícita
-        en el formato requerido por la API NVD v2.0.
         """
         headers = {'apiKey': self.api_key}
 
@@ -379,7 +352,7 @@ class NVDScanner(BaseScanner):
             data = response.json()
 
             if 'vulnerabilities' not in data:
-                logging.warning("⚠️ NVD API: Campo 'vulnerabilities' no encontrado")
+                logging.warning(" NVD API: Campo 'vulnerabilities' no encontrado")
                 return []
 
             vulnerabilities = []
@@ -393,20 +366,20 @@ class NVDScanner(BaseScanner):
                     logging.debug(f"Error parseando CVE: {e}")
                     continue
 
-            logging.info(f"✅ NVD: {len(vulnerabilities)} CVEs encontrados")
+            logging.info(f" NVD: {len(vulnerabilities)} CVEs encontrados")
             return vulnerabilities
 
         except requests.exceptions.Timeout:
-            logging.error("⏱️ Timeout conectando con NVD API (>60s). Reintentando en próxima ejecución.")
+            logging.error("ERROR: Timeout conectando con NVD API (>60s). Reintentando en próxima ejecución.")
             return []
         except requests.exceptions.ConnectionError:
-            logging.error("🌐 Error de red conectando con NVD API.")
+            logging.error("ERROR: Error de red conectando con NVD API.")
             return []
         except requests.exceptions.HTTPError as e:
-            logging.error(f"❌ HTTP Error {e.response.status_code}: {e}")
+            logging.error(f"ERROR: HTTP Error {e.response.status_code}: {e}")
             return []
         except Exception as e:
-            logging.error(f"❌ Error inesperado en NVDScanner: {e}")
+            logging.error(f"ERROR: Error inesperado en NVDScanner: {e}")
             raise
 
     def _parse_vulnerability(self, item: Dict[str, Any]) -> Optional[Dict[str, Any]]:
@@ -509,27 +482,24 @@ class AlertManager:
 
         if not self.dry_run:
             if not all([self.smtp_host, self.smtp_user, self.smtp_pass]):
-                logging.error("❌ Variables SMTP no configuradas en /etc/default/vuln_alerts")
+                logging.error("ERROR: Variables SMTP no configuradas en /etc/default/vuln_alerts")
                 sys.exit(1)
             if not self.email_to:
-                logging.warning("⚠️ No hay destinatarios configurados (EMAIL_TO)")
+                logging.warning("ERROR: No hay destinatarios configurados (EMAIL_TO)")
 
     def send_critical_error(self, error_details: str):
         """
         Enviar email de error crítico.
 
-        CORRECCIÓN: Se aplica html.escape() al contenido del error antes
-        de insertarlo en el HTML, previniendo posibles roturas de estructura
-        HTML causadas por caracteres especiales en tracebacks (<, >, &).
         """
         if not self.email_to or self.dry_run:
-            logging.error(f"❌ Fallo crítico (NO ENVIADO por dry-run/sin config): {error_details}")
+            logging.error(f"ERROR: Fallo crítico (NO ENVIADO por dry-run/sin config): {error_details}")
             return
 
         msg = MIMEMultipart('alternative')
         msg['From'] = self.email_from
         msg['To'] = ', '.join(self.email_to)
-        msg['Subject'] = '🚨 FALLO CRÍTICO: NVD Scanner se ha detenido'
+        msg['Subject'] = 'ERROR: FALLO CRÍTICO: NVD Scanner se ha detenido'
 
         # CORRECCIÓN: html.escape() previene inyección HTML desde el traceback
         safe_error = html.escape(error_details)
@@ -537,7 +507,7 @@ class AlertManager:
         html_body = f"""
         <html>
             <body style="font-family: Arial; color: #333;">
-                <h2 style="color: #d9534f;">⚠️ FALLO CRÍTICO EN NVD SCANNER</h2>
+                <h2 style="color: #d9534f;">ERROR: FALLO CRÍTICO EN NVD SCANNER</h2>
                 <p>El servicio de alertas de vulnerabilidades ha fallado:</p>
                 <pre style="background: #f5f5f5; padding: 10px; border-radius: 5px; white-space: pre-wrap;">
 {safe_error}
@@ -557,7 +527,7 @@ class AlertManager:
             return False
 
         if self.dry_run:
-            logging.info(f"🧪 [DRY-RUN] Se habría enviado un correo a {self.email_to} con {len(alerts)} elementos.")
+            logging.info(f" [DRY-RUN] Se habría enviado un correo a {self.email_to} con {len(alerts)} elementos.")
             for a in alerts:
                 logging.info(f" - [{a['type']}] {a.get('cve', a.get('title'))}")
             return True
@@ -569,7 +539,7 @@ class AlertManager:
         news = [a for a in alerts if a['type'] == 'NEWS']
 
         total_alerts = len(confirmed) + len(early)
-        subject_prefix = "🚨 VULNERABILIDADES CONFIRMADAS" if total_alerts > 0 else "ℹ️ BOLETÍN"
+        subject_prefix = " VULNERABILIDADES CONFIRMADAS" if total_alerts > 0 else "ℹ️ BOLETÍN"
 
         msg = MIMEMultipart()
         msg['From'] = self.email_from
@@ -642,7 +612,7 @@ class AlertManager:
     def _send(self, msg: MIMEMultipart) -> bool:
         """Enviar email a través de SMTP con manejo robusto de errores."""
         if not self.email_to:
-            logging.error("❌ No hay destinatarios configurados")
+            logging.error("ERROR: No hay destinatarios configurados")
             return False
 
         try:
@@ -651,23 +621,23 @@ class AlertManager:
                 server.login(self.smtp_user, self.smtp_pass)
                 server.send_message(msg)
 
-            logging.info(f"✅ Correo enviado exitosamente a {len(self.email_to)} destinatarios")
+            logging.info(f" Correo enviado exitosamente a {len(self.email_to)} destinatarios")
             return True
 
         except smtplib.SMTPAuthenticationError:
-            logging.error("❌ SMTP: Error de autenticación. Verificar SMTP_USER/SMTP_PASS en /etc/default/vuln_alerts")
+            logging.error("ERROR: SMTP: Error de autenticación. Verificar SMTP_USER/SMTP_PASS en /etc/default/vuln_alerts")
             return False
 
         except smtplib.SMTPException as e:
-            logging.error(f"❌ Error SMTP: {e}")
+            logging.error(f"ERROR: Error SMTP: {e}")
             return False
 
         except TimeoutError:
-            logging.error(f"❌ Timeout conectando con {self.smtp_host}:{self.smtp_port}")
+            logging.error(f"ERROR: Timeout conectando con {self.smtp_host}:{self.smtp_port}")
             return False
 
         except Exception as e:
-            logging.error(f"❌ Error desconocido al enviar email: {type(e).__name__}: {e}")
+            logging.error(f"ERROR: Error desconocido al enviar email: {type(e).__name__}: {e}")
             return False
 
 
@@ -698,7 +668,6 @@ def main():
     args = parser.parse_args()
 
     # ====== CONFIGURACIÓN DE LOGGING ======
-    # CORRECCIÓN: Logging inicializado dentro de main() con ruta configurable
     # por argumento, evitando fallos por permisos antes de procesar argumentos.
     logging.basicConfig(
         filename=args.log,
@@ -713,7 +682,7 @@ def main():
     console_handler.setFormatter(formatter)
     logging.getLogger().addHandler(console_handler)
 
-    # Avisar si el traductor no está disponible (ahora dentro del contexto de logging)
+    # Avisar si el traductor no está disponible 
     if not HAS_TRANSLATOR:
         logging.warning("deep-translator no instalado. Las traducciones se saltarán.")
 
@@ -721,12 +690,12 @@ def main():
         config = ConfigLoader(args.config)
 
         logging.info("="*70)
-        logging.info(f"🚀 Iniciando NVD-Scanner {'[DRY-RUN MODE]' if args.dry_run else ''}")
+        logging.info(f" Iniciando NVD-Scanner {'[DRY-RUN MODE]' if args.dry_run else ''}")
         logging.info("="*70)
 
         api_key = os.getenv('NVD_API_KEY')
         if not api_key and not args.dry_run:
-            logging.error("❌ NVD_API_KEY no configurada en /etc/default/vuln_alerts")
+            logging.error(" NVD_API_KEY no configurada en /etc/default/vuln_alerts")
             sys.exit(1)
 
         db = DatabaseManager('/opt/vuln_alerts/cve_alerts.sqlite', dry_run=args.dry_run)
@@ -760,17 +729,7 @@ def main():
         except Exception as e:
             logging.warning(f"Error en NewsScanner: {e}")
 
-        # ================================================================
-        # CORRECCIÓN CRÍTICA: Orden de operaciones corregido.
-        #
-        # Antes (incorrecto):  marcar en BD → enviar email
-        #   Problema: si el email falla, la alerta queda marcada como
-        #   enviada y NUNCA se reintenta.
-        #
-        # Ahora (correcto):    recopilar nuevas → enviar email → si éxito
-        #   → marcar en BD. Si el email falla, en la próxima ejecución
-        #   se volverá a intentar.
-        # ================================================================
+
         new_alerts = []
         for alert in all_alerts:
             alert_id = alert.get('id') or alert.get('cve') or alert.get('title')
@@ -778,7 +737,7 @@ def main():
                 new_alerts.append(alert)
 
         if new_alerts:
-            logging.info(f"📧 Enviando {len(new_alerts)} nuevas alertas...")
+            logging.info(f" Enviando {len(new_alerts)} nuevas alertas...")
             success = alert_manager.send_email(new_alerts)
 
             if success:
@@ -786,31 +745,31 @@ def main():
                 for alert in new_alerts:
                     alert_id = alert.get('id') or alert.get('cve') or alert.get('title')
                     db.mark_as_sent(alert_id)
-                logging.info(f"✅ {len(new_alerts)} alertas registradas en BD.")
+                logging.info(f" {len(new_alerts)} alertas registradas en BD.")
             else:
                 logging.warning(
-                    "⚠️ El email falló. Las alertas NO se marcarán como enviadas "
+                    "ERROR: El email falló. Las alertas NO se marcarán como enviadas "
                     "y se reintentarán en la próxima ejecución."
                 )
         else:
-            logging.info("ℹ️ No hay nuevas alertas para enviar")
+            logging.info(" No hay nuevas alertas para enviar")
 
         db.cleanup_old_records(days=180)
 
         logging.info("="*70)
-        logging.info("✅ Ejecución completada exitosamente")
+        logging.info("OK: Ejecución completada exitosamente")
         logging.info("="*70)
 
     except Exception as e:
         error_msg = traceback.format_exc()
-        logging.critical(f"❌ FALLO CRÍTICO: {error_msg}")
+        logging.critical(f"ERROR: FALLO CRÍTICO: {error_msg}")
 
         # CORRECCIÓN: Excepción tipada en lugar de bare 'except: pass'
         try:
             alert_manager = AlertManager(dry_run=args.dry_run)
             alert_manager.send_critical_error(error_msg)
         except Exception as send_err:
-            logging.critical(f"❌ Además, no se pudo enviar el email de error crítico: {send_err}")
+            logging.critical(f"ERROR: Además, no se pudo enviar el email de error crítico: {send_err}")
 
         sys.exit(1)
 
