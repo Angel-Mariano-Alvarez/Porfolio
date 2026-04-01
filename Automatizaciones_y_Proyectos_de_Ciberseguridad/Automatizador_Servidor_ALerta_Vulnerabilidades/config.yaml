@@ -48,11 +48,11 @@ keywords:
   - "Firefox"
   - "Edge"
 
-  # --- procesadores y graficas ---
+  # --- PROCESADORES Y GRÁFICAS ---
   - "AMD"
   - "Intel"
   - "Radeon"
-  - "Nvidea"
+  - "Nvidia"  # CORRECCIÓN: era "Nvidea" (typo)
 
 early_warning_sources:
   # --- ALERTAS TÉCNICAS (Sección Naranja) ---
