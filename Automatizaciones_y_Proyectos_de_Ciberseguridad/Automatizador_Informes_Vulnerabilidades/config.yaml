@@ -1,0 +1,29 @@
+nvd_api_key: "pon api key aquí"
+
+cache:
+  # Dias antes de considerar expirada una entrada de CVE en cache
+  expiry_days: 30
+  # Nombre del fichero de cache (se guarda junto al script)
+  file: "cves_cache.json"
+
+report:
+  # Cuantos hosts mostrar en el ranking
+  top_n_hosts: 5
+  # Cuantos CVEs mostrar en el ranking
+  top_n_cves: 5
+  # Directorio donde se guardara el .docx generado
+  # "." = misma carpeta donde esta el script
+  output_dir: "."
+
+charts:
+  colors:
+    critical: "#d32f2f"
+    high:     "#ff9800"
+    medium:   "#fdd835"
+    low:      "#4caf50"
+
+translation:
+  # true = traducir descripciones de CVE al espanol
+  # false = mantener el texto original (generalmente ingles)
+  enabled: true
+  target_language: "es"
