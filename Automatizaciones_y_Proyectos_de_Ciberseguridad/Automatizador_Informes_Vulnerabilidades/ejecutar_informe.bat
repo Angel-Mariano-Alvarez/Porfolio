@@ -1,42 +1,51 @@
 @echo off
-REM --- Forzar codificacion UTF-8 para ver caracteres correctamente ---
-chcp 65001 > nul
-REM --------------------------------------------------------
-
-cd /d "%~dp0"
-
-echo.
-echo ===============================================================
-echo   GENERADOR DE INFORMES DE VULNERABILIDADES
-echo ===============================================================
+echo ============================================================
+echo   GENERADOR DE INFORMES DE VULNERABILIDADES v2
+echo ============================================================
 echo.
 
-REM --- CONFIGURACION DE API KEY ---
-REM INSTRUCCIONES: Reemplaza "TU_API_KEY_AQUI" con tu clave real de NVD.
-REM Consiguela gratis en: https://nvd.nist.gov/developers/request-an-api-key
-REM NO subo mi clave real a repositorios publicos.
+:: --- CONFIGURACION FIJA ------------------------------------------------------
+set EXCEL=datos_prueba_1000_vulns.xlsx
+:: -----------------------------------------------------------------------------
 
-set NVD_API_KEY=INGRESA AQUI LA CLAVE QUE CONSEGUISTE
-
-echo [INFO] API Key de NVD cargada.
-echo.
-
-REM Solicitar datos al usuario
-set /p archivo="Ingresa el nombre del archivo Excel (ej: vulnes.xlsx): "
-set /p infraestructura="Ingresa el nombre de la Organizacion (ej: Empresa S.L): "
-set /p mesanio="Ingresa periodo de analisis (ej: Noviembre 2025): "
-
-REM Ejecutar el script
-echo.
-echo [INFO] Iniciando generacion de informe...
-echo.
-
-python generar_informe.py "%archivo%" "%infraestructura%" "%mesanio%"
+:: --- DATOS QUE CAMBIAN EN CADA EJECUCION -------------------------------------
+set /p EMPRESA=Nombre de la empresa:
+set /p PERIODO=Periodo del informe (ej: Marzo 2026):
+:: -----------------------------------------------------------------------------
 
 echo.
-echo ===============================================================
-echo [SUCCESS] PROCESO COMPLETADO
-echo ===============================================================
+
+if "%EMPRESA%"=="" (
+    echo [ERROR] El nombre de empresa no puede estar vacio.
+    pause
+    exit /b 1
+)
+
+if "%PERIODO%"=="" (
+    echo [ERROR] El periodo no puede estar vacio.
+    pause
+    exit /b 1
+)
+
+echo Empresa : %EMPRESA%
+echo Periodo : %PERIODO%
+echo Excel   : %EXCEL%
 echo.
 
+:: Instalar dependencias si no estan
+echo [INFO] Verificando dependencias...
+pip install -r requirements.txt --quiet
+echo.
+
+python generar_informe.py "%EXCEL%" "%EMPRESA%" "%PERIODO%"
+
+if %ERRORLEVEL% NEQ 0 (
+    echo.
+    echo [ERROR] El script termino con errores. Revisa informe_generator.log
+) else (
+    echo.
+    echo [OK] Informe generado correctamente.
+)
+
+echo.
 pause
