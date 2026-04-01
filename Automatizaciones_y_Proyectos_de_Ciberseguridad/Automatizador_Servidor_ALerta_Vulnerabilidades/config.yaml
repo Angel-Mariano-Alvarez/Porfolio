@@ -52,7 +52,7 @@ keywords:
   - "AMD"
   - "Intel"
   - "Radeon"
-  - "Nvidia"  # CORRECCIÓN: era "Nvidea" (typo)
+  - "Nvidia"  
 
 early_warning_sources:
   # --- ALERTAS TÉCNICAS (Sección Naranja) ---
