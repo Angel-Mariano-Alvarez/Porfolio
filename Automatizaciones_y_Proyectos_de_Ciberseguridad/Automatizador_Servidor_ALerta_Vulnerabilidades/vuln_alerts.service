@@ -1,13 +1,16 @@
 [Unit]
-Description=Servicio de Alertas de Vulnerabilidad 
-# CRÍTICO: Esperar a que la red esté online antes de iniciar 
-After=network.target
+Description=Servicio de Alertas de Vulnerabilidad
+# CORRECCIÓN: network-online.target garantiza conectividad real a internet,
+# a diferencia de network.target que solo indica que la pila de red está
+# inicializada. Necesario para acceder a la API NVD y los feeds RSS.
+After=network-online.target
+Wants=network-online.target
 
 [Service]
 # 'oneshot' indica que es un script que inicia, ejecuta y termina.
 Type=oneshot
 
-# Usuario y Grupo de ejecución 
+# Usuario y Grupo de ejecución
 User=alertas
 Group=alertas
 WorkingDirectory=/opt/vuln_alerts/
@@ -18,9 +21,11 @@ EnvironmentFile=/etc/default/vuln_alerts
 # Ejecución: Usamos python3 explícitamente
 ExecStart=/opt/vuln_alerts/venv/bin/python3 /opt/vuln_alerts/vuln_alerts.py
 
-# SEGURIDAD :
-# Si el script tarda más de 2 minutos, el sistema lo detiene forzosamente.
-TimeoutSec=120
+# CORRECCIÓN: TimeoutSec ampliado de 120 a 300 segundos.
+# La API NVD puede tardar hasta 60s, las traducciones y feeds RSS
+# añaden tiempo adicional. 120s era insuficiente y podía causar
+# que systemd matase el proceso a mitad de ejecución.
+TimeoutSec=300
 
 [Install]
 WantedBy=multi-user.target
