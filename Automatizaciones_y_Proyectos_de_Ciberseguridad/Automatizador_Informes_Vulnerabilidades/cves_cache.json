@@ -2,169 +2,289 @@
   "CVE-2021-34527": {
     "cve_id": "CVE-2021-34527",
     "detalle": "Una vulnerabilidad en la ejecución de código remota de Windows Print Spooler",
+    "detalle_es": "Una vulnerabilidad en la ejecución de código remota de Windows Print Spooler",
     "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 8.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-34527",
-    "timestamp": "2025-11-08T14:18:28.645481"
-  },
-  "CVE-2022-3602": {
-    "cve_id": "CVE-2022-3602",
-    "detalle": "Puede activarse una saturación del búfer en la verificación del certificado X.509, específicamente en la verificación de restricciones en el nombre. Tenga en cuenta que esto ocurre después de la verificación de la firma de la cadena de certificados y requiere que una CA haya firmado el certificado malicioso o que la aplicación continúe con la verificación del certificado a pesar de no poder construir una ruta a un emisor confiable. Un atacante puede crear una dirección de correo electrónico maliciosa para desbordar cuatro bytes en la pila de memoria controlados por el atacante. Este desbord...",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3602",
-    "timestamp": "2025-11-08T14:18:29.611001"
-  },
-  "CVE-2020-0601": {
-    "cve_id": "CVE-2020-0601",
-    "detalle": "Se presenta una vulnerabilidad de suplantación de identidad en la manera en que Windows CryptoAPI (Crypt32.dll) comprueba los certificados Elliptic Curve Cryptography (ECC). Un atacante podría explotar la vulnerabilidad mediante el uso de un certificado de firma de código falsificado para firmar un ejecutable malicioso, haciendo que parezca que el archivo era de una fuente confiable y legítima, también se conoce como \"Windows CryptoAPI Spoofing Vulnerability\".",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-0601",
-    "timestamp": "2025-11-08T14:18:30.549466"
-  },
-  "CVE-2021-44228": {
-    "cve_id": "CVE-2021-44228",
-    "detalle": "Las características JNDI de Apache Log4j2 2.0-beta9 hasta 2.15.0 (excluyendo las versiones de seguridad 2.12.2, 2.12.3 y 2.3.1) utilizadas en la configuración, los mensajes de registro y los parámetros no protegen contra LDAP controlado por un atacante y otros puntos finales relacionados con JNDI. Un atacante que pueda controlar los mensajes de registro o los parámetros de los mensajes de registro puede ejecutar código arbitrario cargado desde servidores LDAP cuando la sustitución de la búsqueda de mensajes está habilitada. A partir de la versión 2.15.0 de log4j, este comportamiento ha sido...",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44228",
-    "timestamp": "2025-11-08T14:18:31.524286"
-  },
-  "CVE-2017-0144": {
-    "cve_id": "CVE-2017-0144",
-    "detalle": "El servidor SMBv1 en Microsoft Windows Vista SP2; Windows Server 2008 SP2 y R2 SP1; Windows 7 SP1; Windows 8.1; Windows Server 2012 Gold y R2; Windows RT 8.1; y Windows 10 Gold, 1511 y 1607; y Windows Server 2016 permite a atacantes remotos ejecutar código arbitrario a través de paquetes manipulados, vulnerabilidad también conocida como \"Windows SMB Remote Code Execution Vulnerability\". Esta vulnerabilidad es diferente a la descrita en CVE-2017-0143, CVE-2017-0145, CVE-2017-0146 y CVE-2017-0148.",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-0144",
-    "timestamp": "2025-11-08T14:18:32.371788"
-  },
-  "CVE-2023-23397": {
-    "cve_id": "CVE-2023-23397",
-    "detalle": "Microsoft Outlook Elevation of Privilege Vulnerability",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-23397",
-    "timestamp": "2025-11-08T14:18:33.317474"
-  },
-  "CVE-2022-22965": {
-    "cve_id": "CVE-2022-22965",
-    "detalle": "Una aplicación Spring MVC o Spring WebFlux que es ejecutada en JDK 9+ puede ser vulnerable a la ejecución de código remota (RCE) por medio de una vinculación de datos. La explotación específica requiere que la aplicación sea ejecutada en Tomcat como un despliegue WAR. Si la aplicación es desplegada como un jar ejecutable de Spring Boot, es decir, por defecto, no es vulnerable a la explotación. Sin embargo, la naturaleza de la vulnerabilidad es más general, y puede haber otras formas de explotarla",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-22965",
-    "timestamp": "2025-11-08T14:18:34.311312"
-  },
-  "CVE-2020-1472": {
-    "cve_id": "CVE-2020-1472",
-    "detalle": "Se presenta una vulnerabilidad de elevación de privilegios cuando un atacante establece una conexión de canal seguro Netlogon vulnerable hacia un controlador de dominio, usando el Netlogon Remote Protocol (MS-NRPC), también se conoce como \"Netlogon Elevation of Privilege Vulnerability\".",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-1472",
-    "timestamp": "2025-11-08T14:18:35.146179"
-  },
-  "CVE-2019-0708": {
-    "cve_id": "CVE-2019-0708",
-    "detalle": "Existe una vulnerabilidad de ejecución remota de código en Remote Desktop Services, anteriormente conocido como Terminal Services, cuando un atacante no autenticado se conecta al sistema de destino mediante RDP y envía peticiones especialmente diseñadas, conocida como 'Remote Desktop Services Remote Code Execution Vulnerability'.",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-0708",
-    "timestamp": "2025-11-08T14:18:36.010313"
-  },
-  "CVE-2021-26855": {
-    "cve_id": "CVE-2021-26855",
-    "detalle": "Una Vulnerabilidad de Ejecución de código remota de Microsoft Exchange Server. Este ID de CVE es diferente de CVE-2021-26412, CVE-2021-26854, CVE-2021-26857, CVE-2021-26858, CVE-2021-27065, CVE-2021-27078",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-26855",
-    "timestamp": "2025-11-08T14:18:36.861226"
-  },
-  "CVE-2024-30088": {
-    "cve_id": "CVE-2024-30088",
-    "detalle": "Vulnerabilidad de elevación de privilegios del kernel de Windows",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-30088",
-    "timestamp": "2025-11-08T16:56:44.292365"
-  },
-  "CVE-2023-4863": {
-    "cve_id": "CVE-2023-4863",
-    "detalle": "El desbordamiento del búfer de memoria en libwebp en Google Chrome anterior a 116.0.5845.187 y libwebp 1.3.2 permitía a un atacante remoto realizar una escritura en memoria fuera de los límites a través de una página HTML manipulada. (Severidad de seguridad de Chromium: crítica)",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4863",
-    "timestamp": "2025-11-08T16:56:45.433041"
-  },
-  "CVE-2023-28432": {
-    "cve_id": "CVE-2023-28432",
-    "detalle": "Minio is a Multi-Cloud Object Storage framework. In a cluster deployment starting with RELEASE.2019-12-17T23-16-33Z and prior to RELEASE.2023-03-20T20-16-18Z, MinIO returns all environment variables, including `MINIO_SECRET_KEY` and `MINIO_ROOT_PASSWORD`, resulting in information disclosure. All users of distributed deployment are impacted. All users are advised to upgrade to RELEASE.2023-03-20T20-16-18Z.",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28432",
-    "timestamp": "2025-11-08T16:56:48.384696"
-  },
-  "CVE-2023-36884": {
-    "cve_id": "CVE-2023-36884",
-    "detalle": "Windows Search Remote Code Execution Vulnerability",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-36884",
-    "timestamp": "2025-11-08T16:56:49.213686"
-  },
-  "CVE-2024-21338": {
-    "cve_id": "CVE-2024-21338",
-    "detalle": "Vulnerabilidad de elevación de privilegios del kernel de Windows",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21338",
-    "timestamp": "2025-11-08T16:56:50.062477"
-  },
-  "CVE-2023-41064": {
-    "cve_id": "CVE-2023-41064",
-    "detalle": "Se solucionó un problema de Desbordamiento de Búfer de manejo de la memoria mejorada. Este problema se solucionó en macOS Monterey 12.6.9, macOS Big Sur 11.7.10, macOS Ventura 13.5.2, iOS 16.6.1 y iPadOS 16.6.1, iOS 15.7.9 y iPadOS 15.7.9. El procesamiento de una imagen creada con fines maliciosos puede provocar la ejecución de código arbitrario. Apple está al tanto de un informe de que este problema puede haber sido explotado activamente.",
-    "origen": "NVD",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-41064",
-    "timestamp": "2025-11-08T16:56:53.906959"
+    "timestamp": "2026-03-27T11:11:10.065114"
   },
   "CVE-2019-19781": {
     "cve_id": "CVE-2019-19781",
     "detalle": "Se descubrió un problema en Citrix Application Delivery Controller (ADC) and Gateway versiones 10.5, 11.1, 12.0, 12.1 y 13.0. Permiten un salto de directorio.",
+    "detalle_es": "Se descubrió un problema en Citrix Application Delivery Controller (ADC) and Gateway versiones 10.5, 11.1, 12.0, 12.1 y 13.0. Permiten un salto de directorio.",
     "origen": "NVD",
+    "source": "MITRE",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-19781",
-    "timestamp": "2025-11-08T17:00:04.338049"
+    "timestamp": "2026-03-27T11:11:11.495459"
   },
   "CVE-2021-26857": {
     "cve_id": "CVE-2021-26857",
     "detalle": "Una Vulnerabilidad de Ejecución de código remota de Microsoft Exchange Server. Este ID de CVE es diferente de CVE-2021-26412, CVE-2021-26854, CVE-2021-26855, CVE-2021-26858, CVE-2021-27065, CVE-2021-27078",
+    "detalle_es": "Una Vulnerabilidad de Ejecución de código remota de Microsoft Exchange Server. Este ID de CVE es diferente de CVE-2021-26412, CVE-2021-26854, CVE-2021-26855, CVE-2021-26858, CVE-2021-27065, CVE-2021-27078",
     "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 7.8,
+    "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-26857",
-    "timestamp": "2025-11-08T17:00:05.395160"
+    "timestamp": "2026-03-27T11:11:12.897439"
+  },
+  "CVE-2021-44228": {
+    "cve_id": "CVE-2021-44228",
+    "detalle": "Las características JNDI de Apache Log4j2 2.0-beta9 hasta 2.15.0 (excluyendo las versiones de seguridad 2.12.2, 2.12.3 y 2.3.1) utilizadas en la configuración, los mensajes de registro y los parámetros no protegen contra LDAP controlado por un atacante y otros puntos finales relacionados con JNDI. Un atacante que pueda controlar los mensajes de registro o los parámetros de los mensajes de registro puede ejecutar código arbitrario cargado desde servidores LDAP cuando la sustitución de la búsqueda de mensajes está habilitada. A partir de la versión 2.15.0 de log4j, este comportamiento ha sido deshabilitado por defecto. A partir de la versión 2.16.0 (junto con las versiones 2.12.2, 2.12.3 y 2.3.1), esta funcionalidad se ha eliminado por completo. Tenga en cuenta que esta vulnerabilidad es específica de log4j-core y no afecta a log4net, log4cxx u otros proyectos de Apache Logging Services",
+    "detalle_es": "Las características JNDI de Apache Log4j2 2.0-beta9 hasta 2.15.0 (excluyendo las versiones de seguridad 2.12.2, 2.12.3 y 2.3.1) utilizadas en la configuración, los mensajes de registro y los parámetros no protegen contra LDAP controlado por un atacante y otros puntos finales relacionados con JNDI. Un atacante que pueda controlar los mensajes de registro o los parámetros de los mensajes de registro puede ejecutar código arbitrario cargado desde servidores LDAP cuando la sustitución de la búsqueda de mensajes está habilitada. A partir de la versión 2.15.0 de log4j, este comportamiento ha sido deshabilitado por defecto. A partir de la versión 2.16.0 (junto con las versiones 2.12.2, 2.12.3 y 2.3.1), esta funcionalidad se ha eliminado por completo. Tenga en cuenta que esta vulnerabilidad es específica de log4j-core y no afecta a log4net, log4cxx u otros proyectos de Apache Logging Services",
+    "origen": "NVD",
+    "source": "Apache",
+    "cvss_score": 10.0,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44228",
+    "timestamp": "2026-03-27T11:11:14.241001"
+  },
+  "CVE-2023-36884": {
+    "cve_id": "CVE-2023-36884",
+    "detalle": "Windows Search Remote Code Execution Vulnerability",
+    "detalle_es": "Vulnerabilidad de ejecución remota de código de búsqueda de Windows",
+    "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 7.5,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-36884",
+    "timestamp": "2026-03-27T11:11:15.776567"
   },
   "CVE-2018-11776": {
     "cve_id": "CVE-2018-11776",
-    "detalle": "Apache Struts, desde la versión 2.3 hasta la 2.3.34 y desde la versión 2.5 hasta la 2.5.16, sufre de una posible ejecución remota de código cuando el valor de alwaysSelectFullNamespace es \"true\" (establecido por el usuario o por un plugin como Convention Plugin). Además, los resultados se emplean sin ningún espacio de nombres y, al mismo tiempo, el paquete superior no tiene espacio de nombres o contiene caracteres comodín. De manera similar a como pasa con los resultados, existe la misma posibilidad al emplear la etiqueta url, que no tiene un valor y acción definidos y, además, su paquete s...",
+    "detalle": "Apache Struts, desde la versión 2.3 hasta la 2.3.34 y desde la versión 2.5 hasta la 2.5.16, sufre de una posible ejecución remota de código cuando el valor de alwaysSelectFullNamespace es \"true\" (establecido por el usuario o por un plugin como Convention Plugin). Además, los resultados se emplean sin ningún espacio de nombres y, al mismo tiempo, el paquete superior no tiene espacio de nombres o contiene caracteres comodín. De manera similar a como pasa con los resultados, existe la misma posibilidad al emplear la etiqueta url, que no tiene un valor y acción definidos y, además, su paquete superior no tiene espacio de nombres o contiene caracteres comodín.",
+    "detalle_es": "Apache Struts, desde la versión 2.3 hasta la 2.3.34 y desde la versión 2.5 hasta la 2.5.16, sufre de una posible ejecución remota de código cuando el valor de alwaysSelectFullNamespace es \"true\" (establecido por el usuario o por un plugin como Convention Plugin). Además, los resultados se emplean sin ningún espacio de nombres y, al mismo tiempo, el paquete superior no tiene espacio de nombres o contiene caracteres comodín. De manera similar a como pasa con los resultados, existe la misma posibilidad al emplear la etiqueta url, que no tiene un valor y acción definidos y, además, su paquete superior no tiene espacio de nombres o contiene caracteres comodín.",
     "origen": "NVD",
+    "source": "Apache",
+    "cvss_score": 8.1,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-11776",
-    "timestamp": "2025-11-08T17:00:06.912647"
+    "timestamp": "2026-03-27T11:11:17.270835"
   },
   "CVE-2022-1388": {
     "cve_id": "CVE-2022-1388",
     "detalle": "En F5 BIG-IP versiones 16.1.x anteriores a 16.1.2.2, versiones 15.1.x anteriores a 15.1.5.1, versiones 14.1.x anteriores a 14.1.4.6, versiones 13.1.x anteriores a 13.1.5 y todas las versiones 12.1.x y 11.6.x, las peticiones no reveladas pueden omitir la autenticación REST de iControl. Nota: las versiones de software que han alcanzado el Fin del Soporte Técnico (EoTS) no son evaluadas",
+    "detalle_es": "En F5 BIG-IP versiones 16.1.x anteriores a 16.1.2.2, versiones 15.1.x anteriores a 15.1.5.1, versiones 14.1.x anteriores a 14.1.4.6, versiones 13.1.x anteriores a 13.1.5 y todas las versiones 12.1.x y 11.6.x, las peticiones no reveladas pueden omitir la autenticación REST de iControl. Nota: las versiones de software que han alcanzado el Fin del Soporte Técnico (EoTS) no son evaluadas",
     "origen": "NVD",
+    "source": "F5",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1388",
-    "timestamp": "2025-11-08T17:00:08.021988"
+    "timestamp": "2026-03-27T11:11:18.758534"
   },
   "CVE-2018-13379": {
     "cve_id": "CVE-2018-13379",
     "detalle": "Una limitación inadecuada de un nombre de ruta a un directorio restringido (\"Path Traversal\") en Fortinet FortiOS versiones 6.0.0 a 6.0.4, 5.6.3 a 5.6.7 y 5.4.6 a 5.4.12 y FortiProxy versiones 2.0.0, 1. 2.0 a 1.2.8, 1.1.0 a 1.1.6, 1.0.0 a 1.0.7 bajo el portal web SSL VPN permite a un atacante no autenticado descargar archivos del sistema a través de solicitudes de recursos HTTP especialmente diseñadas",
+    "detalle_es": "Una limitación inadecuada de un nombre de ruta a un directorio restringido (\"Path Traversal\") en Fortinet FortiOS versiones 6.0.0 a 6.0.4, 5.6.3 a 5.6.7 y 5.4.6 a 5.4.12 y FortiProxy versiones 2.0.0, 1. 2.0 a 1.2.8, 1.1.0 a 1.1.6, 1.0.0 a 1.0.7 bajo el portal web SSL VPN permite a un atacante no autenticado descargar archivos del sistema a través de solicitudes de recursos HTTP especialmente diseñadas",
     "origen": "NVD",
+    "source": "Fortinet",
+    "cvss_score": 9.1,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+    "cvss_version": "3.1",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-13379",
-    "timestamp": "2025-11-08T17:00:08.911781"
+    "timestamp": "2026-03-27T11:11:20.217343"
   },
   "CVE-2018-8174": {
     "cve_id": "CVE-2018-8174",
     "detalle": "Existe una vulnerabilidad de ejecución remota de código debido a la forma en la que el motor VBScript gestiona los objetos en la memoria. Esto también se conoce como \"Windows VBScript Engine Remote Code Execution Vulnerability\". Esto afecta a Windows 7, Windows Server 2012 R2, Windows RT 8.1, Windows Server 2008, Windows Server 2012, Windows 8.1, Windows Server 2016, Windows Server 2008 R2, Windows 10 y Windows 10 Servers.",
+    "detalle_es": "Existe una vulnerabilidad de ejecución remota de código debido a la forma en la que el motor VBScript gestiona los objetos en la memoria. Esto también se conoce como \"Windows VBScript Engine Remote Code Execution Vulnerability\". Esto afecta a Windows 7, Windows Server 2012 R2, Windows RT 8.1, Windows Server 2008, Windows Server 2012, Windows 8.1, Windows Server 2016, Windows Server 2008 R2, Windows 10 y Windows 10 Servers.",
     "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 7.5,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-8174",
-    "timestamp": "2025-11-08T17:00:09.955334"
+    "timestamp": "2026-03-27T11:11:21.666773"
+  },
+  "CVE-2022-22965": {
+    "cve_id": "CVE-2022-22965",
+    "detalle": "Una aplicación Spring MVC o Spring WebFlux que es ejecutada en JDK 9+ puede ser vulnerable a la ejecución de código remota (RCE) por medio de una vinculación de datos. La explotación específica requiere que la aplicación sea ejecutada en Tomcat como un despliegue WAR. Si la aplicación es desplegada como un jar ejecutable de Spring Boot, es decir, por defecto, no es vulnerable a la explotación. Sin embargo, la naturaleza de la vulnerabilidad es más general, y puede haber otras formas de explotarla",
+    "detalle_es": "Una aplicación Spring MVC o Spring WebFlux que es ejecutada en JDK 9+ puede ser vulnerable a la ejecución de código remota (RCE) por medio de una vinculación de datos. La explotación específica requiere que la aplicación sea ejecutada en Tomcat como un despliegue WAR. Si la aplicación es desplegada como un jar ejecutable de Spring Boot, es decir, por defecto, no es vulnerable a la explotación. Sin embargo, la naturaleza de la vulnerabilidad es más general, y puede haber otras formas de explotarla",
+    "origen": "NVD",
+    "source": "Vmware",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-22965",
+    "timestamp": "2026-03-27T11:11:23.061280"
+  },
+  "CVE-2021-26855": {
+    "cve_id": "CVE-2021-26855",
+    "detalle": "Una Vulnerabilidad de Ejecución de código remota de Microsoft Exchange Server. Este ID de CVE es diferente de CVE-2021-26412, CVE-2021-26854, CVE-2021-26857, CVE-2021-26858, CVE-2021-27065, CVE-2021-27078",
+    "detalle_es": "Una Vulnerabilidad de Ejecución de código remota de Microsoft Exchange Server. Este ID de CVE es diferente de CVE-2021-26412, CVE-2021-26854, CVE-2021-26857, CVE-2021-26858, CVE-2021-27065, CVE-2021-27078",
+    "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 9.1,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-26855",
+    "timestamp": "2026-03-27T11:11:24.452628"
+  },
+  "CVE-2023-41064": {
+    "cve_id": "CVE-2023-41064",
+    "detalle": "Se solucionó un problema de Desbordamiento de Búfer de manejo de la memoria mejorada. Este problema se solucionó en macOS Monterey 12.6.9, macOS Big Sur 11.7.10, macOS Ventura 13.5.2, iOS 16.6.1 y iPadOS 16.6.1, iOS 15.7.9 y iPadOS 15.7.9. El procesamiento de una imagen creada con fines maliciosos puede provocar la ejecución de código arbitrario. Apple está al tanto de un informe de que este problema puede haber sido explotado activamente.",
+    "detalle_es": "Se solucionó un problema de Desbordamiento de Búfer de manejo de la memoria mejorada. Este problema se solucionó en macOS Monterey 12.6.9, macOS Big Sur 11.7.10, macOS Ventura 13.5.2, iOS 16.6.1 y iPadOS 16.6.1, iOS 15.7.9 y iPadOS 15.7.9. El procesamiento de una imagen creada con fines maliciosos puede provocar la ejecución de código arbitrario. Apple está al tanto de un informe de que este problema puede haber sido explotado activamente.",
+    "origen": "NVD",
+    "source": "Apple",
+    "cvss_score": 7.8,
+    "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-41064",
+    "timestamp": "2026-03-27T11:11:25.834616"
+  },
+  "CVE-2024-30088": {
+    "cve_id": "CVE-2024-30088",
+    "detalle": "Vulnerabilidad de elevación de privilegios del kernel de Windows",
+    "detalle_es": "Vulnerabilidad de elevación de privilegios del kernel de Windows",
+    "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 7.0,
+    "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-30088",
+    "timestamp": "2026-03-27T11:11:27.356480"
+  },
+  "CVE-2020-0601": {
+    "cve_id": "CVE-2020-0601",
+    "detalle": "Se presenta una vulnerabilidad de suplantación de identidad en la manera en que Windows CryptoAPI (Crypt32.dll) comprueba los certificados Elliptic Curve Cryptography (ECC). Un atacante podría explotar la vulnerabilidad mediante el uso de un certificado de firma de código falsificado para firmar un ejecutable malicioso, haciendo que parezca que el archivo era de una fuente confiable y legítima, también se conoce como \"Windows CryptoAPI Spoofing Vulnerability\".",
+    "detalle_es": "Se presenta una vulnerabilidad de suplantación de identidad en la manera en que Windows CryptoAPI (Crypt32.dll) comprueba los certificados Elliptic Curve Cryptography (ECC). Un atacante podría explotar la vulnerabilidad mediante el uso de un certificado de firma de código falsificado para firmar un ejecutable malicioso, haciendo que parezca que el archivo era de una fuente confiable y legítima, también se conoce como \"Windows CryptoAPI Spoofing Vulnerability\".",
+    "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 8.1,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-0601",
+    "timestamp": "2026-03-27T11:11:28.775921"
+  },
+  "CVE-2023-28432": {
+    "cve_id": "CVE-2023-28432",
+    "detalle": "Minio is a Multi-Cloud Object Storage framework. In a cluster deployment starting with RELEASE.2019-12-17T23-16-33Z and prior to RELEASE.2023-03-20T20-16-18Z, MinIO returns all environment variables, including `MINIO_SECRET_KEY` and `MINIO_ROOT_PASSWORD`, resulting in information disclosure. All users of distributed deployment are impacted. All users are advised to upgrade to RELEASE.2023-03-20T20-16-18Z.",
+    "detalle_es": "Minio es un marco de almacenamiento de objetos multinube. En una implementación de clúster que comienza con RELEASE.2019-12-17T23-16-33Z y antes de RELEASE.2023-03-20T20-16-18Z, MinIO devuelve todas las variables de entorno, incluidas `MINIO_SECRET_KEY` y `MINIO_ROOT_PASSWORD`, lo que resulta en la divulgación de información. Todos los usuarios de la implementación distribuida se ven afectados. Se recomienda a todos los usuarios que actualicen a RELEASE.2023-03-20T20-16-18Z.",
+    "origen": "NVD",
+    "source": "Github",
+    "cvss_score": 7.5,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28432",
+    "timestamp": "2026-03-27T11:11:30.173370"
   },
   "CVE-2021-34523": {
     "cve_id": "CVE-2021-34523",
     "detalle": "Una vulnerabilidad de Elevación de Privilegios de Microsoft Exchange Server. Este ID de CVE es diferente de CVE-2021-33768, CVE-2021-34470",
+    "detalle_es": "Una vulnerabilidad de Elevación de Privilegios de Microsoft Exchange Server. Este ID de CVE es diferente de CVE-2021-33768, CVE-2021-34470",
     "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 9.0,
+    "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+    "cvss_version": "3.1",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-34523",
-    "timestamp": "2025-11-08T17:00:12.764850"
+    "timestamp": "2026-03-27T11:11:31.534351"
+  },
+  "CVE-2017-0144": {
+    "cve_id": "CVE-2017-0144",
+    "detalle": "El servidor SMBv1 en Microsoft Windows Vista SP2; Windows Server 2008 SP2 y R2 SP1; Windows 7 SP1; Windows 8.1; Windows Server 2012 Gold y R2; Windows RT 8.1; y Windows 10 Gold, 1511 y 1607; y Windows Server 2016 permite a atacantes remotos ejecutar código arbitrario a través de paquetes manipulados, vulnerabilidad también conocida como \"Windows SMB Remote Code Execution Vulnerability\". Esta vulnerabilidad es diferente a la descrita en CVE-2017-0143, CVE-2017-0145, CVE-2017-0146 y CVE-2017-0148.",
+    "detalle_es": "El servidor SMBv1 en Microsoft Windows Vista SP2; Windows Server 2008 SP2 y R2 SP1; Windows 7 SP1; Windows 8.1; Windows Server 2012 Gold y R2; Windows RT 8.1; y Windows 10 Gold, 1511 y 1607; y Windows Server 2016 permite a atacantes remotos ejecutar código arbitrario a través de paquetes manipulados, vulnerabilidad también conocida como \"Windows SMB Remote Code Execution Vulnerability\". Esta vulnerabilidad es diferente a la descrita en CVE-2017-0143, CVE-2017-0145, CVE-2017-0146 y CVE-2017-0148.",
+    "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 8.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-0144",
+    "timestamp": "2026-03-27T11:11:32.939514"
   },
   "CVE-2021-21985": {
     "cve_id": "CVE-2021-21985",
     "detalle": "VSphere Client (HTML5) contiene una vulnerabilidad de ejecución de código remota debido a una falta de comprobación de entrada en el plugin Virtual SAN Health Check, que está habilitado por defecto en vCenter Server. Un actor malicioso con acceso de red al puerto 443 puede explotar este problema para ejecutar comandos con privilegios ilimitados en el sistema operativo subyacente que aloja a vCenter Server",
+    "detalle_es": "VSphere Client (HTML5) contiene una vulnerabilidad de ejecución de código remota debido a una falta de comprobación de entrada en el plugin Virtual SAN Health Check, que está habilitado por defecto en vCenter Server. Un actor malicioso con acceso de red al puerto 443 puede explotar este problema para ejecutar comandos con privilegios ilimitados en el sistema operativo subyacente que aloja a vCenter Server",
     "origen": "NVD",
+    "source": "Vmware",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-21985",
-    "timestamp": "2025-11-08T17:00:13.909050"
+    "timestamp": "2026-03-27T11:11:34.434624"
+  },
+  "CVE-2023-23397": {
+    "cve_id": "CVE-2023-23397",
+    "detalle": "Microsoft Outlook Elevation of Privilege Vulnerability",
+    "detalle_es": "Vulnerabilidad de elevación de privilegios de Microsoft Outlook",
+    "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-23397",
+    "timestamp": "2026-03-27T11:11:35.810889"
+  },
+  "CVE-2024-21338": {
+    "cve_id": "CVE-2024-21338",
+    "detalle": "Vulnerabilidad de elevación de privilegios del kernel de Windows",
+    "detalle_es": "Vulnerabilidad de elevación de privilegios del kernel de Windows",
+    "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 7.8,
+    "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21338",
+    "timestamp": "2026-03-27T11:11:37.205784"
+  },
+  "CVE-2019-0708": {
+    "cve_id": "CVE-2019-0708",
+    "detalle": "Existe una vulnerabilidad de ejecución remota de código en Remote Desktop Services, anteriormente conocido como Terminal Services, cuando un atacante no autenticado se conecta al sistema de destino mediante RDP y envía peticiones especialmente diseñadas, conocida como 'Remote Desktop Services Remote Code Execution Vulnerability'.",
+    "detalle_es": "Existe una vulnerabilidad de ejecución remota de código en Remote Desktop Services, anteriormente conocido como Terminal Services, cuando un atacante no autenticado se conecta al sistema de destino mediante RDP y envía peticiones especialmente diseñadas, conocida como 'Remote Desktop Services Remote Code Execution Vulnerability'.",
+    "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-0708",
+    "timestamp": "2026-03-27T11:11:38.589807"
+  },
+  "CVE-2023-4863": {
+    "cve_id": "CVE-2023-4863",
+    "detalle": "El desbordamiento del búfer de memoria en libwebp en Google Chrome anterior a 116.0.5845.187 y libwebp 1.3.2 permitía a un atacante remoto realizar una escritura en memoria fuera de los límites a través de una página HTML manipulada. (Severidad de seguridad de Chromium: crítica)",
+    "detalle_es": "El desbordamiento del búfer de memoria en libwebp en Google Chrome anterior a 116.0.5845.187 y libwebp 1.3.2 permitía a un atacante remoto realizar una escritura en memoria fuera de los límites a través de una página HTML manipulada. (Severidad de seguridad de Chromium: crítica)",
+    "origen": "NVD",
+    "source": "Google",
+    "cvss_score": 8.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4863",
+    "timestamp": "2026-03-27T11:11:40.007014"
+  },
+  "CVE-2022-3602": {
+    "cve_id": "CVE-2022-3602",
+    "detalle": "Puede activarse una saturación del búfer en la verificación del certificado X.509, específicamente en la verificación de restricciones en el nombre. Tenga en cuenta que esto ocurre después de la verificación de la firma de la cadena de certificados y requiere que una CA haya firmado el certificado malicioso o que la aplicación continúe con la verificación del certificado a pesar de no poder construir una ruta a un emisor confiable. Un atacante puede crear una dirección de correo electrónico maliciosa para desbordar cuatro bytes en la pila de memoria controlados por el atacante. Este desbordamiento del búfer podría provocar un bloqueo (provocando una denegación de servicio) o una potencial ejecución remota de código. Muchas plataformas implementan protecciones contra el desbordamiento de la pila de memoria que mitigarían el riesgo de ejecución remota de código. El riesgo puede mitigarse, aún más, según el diseño de la pila de memoria para cualquier plataforma/compilador determinado. Los anuncios previos de CVE-2022-3602 describieron este problema como CRÍTICO. Un análisis más detallado basado en algunos de los factores mitigantes descritos anteriormente ha llevado a que esto se rebaje a ALTO. Aún se recomienda a los usuarios que actualicen a una nueva versión lo antes posible. En un cliente TLS, esto se puede desencadenar conectándose a un servidor malicioso. En un servidor TLS, esto se puede activar si el servidor solicita la autenticación del cliente y se conecta un cliente malintencionado. Corregido en OpenSSL 3.0.7 (Afectado 3.0.0,3.0.1,3.0.2,3.0.3,3.0.4,3.0.5,3.0.6).",
+    "detalle_es": "Puede activarse una saturación del búfer en la verificación del certificado X.509, específicamente en la verificación de restricciones en el nombre. Tenga en cuenta que esto ocurre después de la verificación de la firma de la cadena de certificados y requiere que una CA haya firmado el certificado malicioso o que la aplicación continúe con la verificación del certificado a pesar de no poder construir una ruta a un emisor confiable. Un atacante puede crear una dirección de correo electrónico maliciosa para desbordar cuatro bytes en la pila de memoria controlados por el atacante. Este desbordamiento del búfer podría provocar un bloqueo (provocando una denegación de servicio) o una potencial ejecución remota de código. Muchas plataformas implementan protecciones contra el desbordamiento de la pila de memoria que mitigarían el riesgo de ejecución remota de código. El riesgo puede mitigarse, aún más, según el diseño de la pila de memoria para cualquier plataforma/compilador determinado. Los anuncios previos de CVE-2022-3602 describieron este problema como CRÍTICO. Un análisis más detallado basado en algunos de los factores mitigantes descritos anteriormente ha llevado a que esto se rebaje a ALTO. Aún se recomienda a los usuarios que actualicen a una nueva versión lo antes posible. En un cliente TLS, esto se puede desencadenar conectándose a un servidor malicioso. En un servidor TLS, esto se puede activar si el servidor solicita la autenticación del cliente y se conecta un cliente malintencionado. Corregido en OpenSSL 3.0.7 (Afectado 3.0.0,3.0.1,3.0.2,3.0.3,3.0.4,3.0.5,3.0.6).",
+    "origen": "NVD",
+    "source": "Openssl",
+    "cvss_score": 7.5,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3602",
+    "timestamp": "2026-03-27T11:11:41.392614"
+  },
+  "CVE-2020-1472": {
+    "cve_id": "CVE-2020-1472",
+    "detalle": "Se presenta una vulnerabilidad de elevación de privilegios cuando un atacante establece una conexión de canal seguro Netlogon vulnerable hacia un controlador de dominio, usando el Netlogon Remote Protocol (MS-NRPC), también se conoce como \"Netlogon Elevation of Privilege Vulnerability\".",
+    "detalle_es": "Se presenta una vulnerabilidad de elevación de privilegios cuando un atacante establece una conexión de canal seguro Netlogon vulnerable hacia un controlador de dominio, usando el Netlogon Remote Protocol (MS-NRPC), también se conoce como \"Netlogon Elevation of Privilege Vulnerability\".",
+    "origen": "NVD",
+    "source": "Microsoft",
+    "cvss_score": 5.5,
+    "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "cvss_version": "3.1",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-1472",
+    "timestamp": "2026-03-27T11:11:42.789113"
   }
 }
